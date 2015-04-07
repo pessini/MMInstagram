@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>1D53C856-54DE-491A-9042-46106B04CB72</string>
+	<key>IDESourceControlProjectName</key>
+	<string>MMInstagram</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>5E7BF3A8DF906AA9549E90802CB70A775135BADA</key>
+		<string>https://github.com/pessini/MMInstagram.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>MMInstagram.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>5E7BF3A8DF906AA9549E90802CB70A775135BADA</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/pessini/MMInstagram.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>5E7BF3A8DF906AA9549E90802CB70A775135BADA</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>5E7BF3A8DF906AA9549E90802CB70A775135BADA</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MMInstagram</string>
+		</dict>
+	</array>
+</dict>
+</plist>
