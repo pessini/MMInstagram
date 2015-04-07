@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Item-->
         <scene sceneID="Xy5-V7-9gz">
             <objects>
-                <viewController id="Iby-cZ-vp5" sceneMemberID="viewController">
+                <viewController id="Iby-cZ-vp5" customClass="CameraViewController" customModule="MMInstagram" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4un-Tb-INR"/>
                         <viewControllerLayoutGuide type="bottom" id="97W-N5-Oy0"/>
@@ -16,47 +16,111 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yNM-e3-uak">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="81B-kt-jJd">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="44" width="400" height="512"/>
+                                </variation>
+                            </imageView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kRv-JY-b12">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <items>
-                                    <barButtonItem systemItem="bookmarks" id="059-d7-4K6"/>
-                                    <barButtonItem width="129" style="plain" systemItem="fixedSpace" id="Yrf-Px-2sS"/>
-                                    <barButtonItem systemItem="camera" id="ExN-Pm-j6D"/>
+                                    <navigationItem title="Camera" id="PGj-z6-6af"/>
+                                </items>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="44"/>
+                                </variation>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fp6-51-jDa">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem image="cameraroll-default" id="S37-Ab-kIZ"/>
+                                    <barButtonItem width="108" style="plain" systemItem="fixedSpace" id="piq-SZ-1w3"/>
+                                    <barButtonItem systemItem="camera" id="O1R-cd-CZV"/>
                                 </items>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="0.0" y="556" width="400" height="44"/>
                                 </variation>
                             </toolbar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="81B-kt-jJd">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="400" height="556"/>
-                                </variation>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="yNM-e3-uak"/>
                                 <exclude reference="81B-kt-jJd"/>
+                                <exclude reference="kRv-JY-b12"/>
+                                <exclude reference="fp6-51-jDa"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="yNM-e3-uak"/>
                                 <include reference="81B-kt-jJd"/>
+                                <include reference="kRv-JY-b12"/>
+                                <include reference="fp6-51-jDa"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="LmR-FB-g9z"/>
+                    <connections>
+                        <outlet property="imageView" destination="81B-kt-jJd" id="fxn-fx-Kcx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="faU-OD-dxF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3579" y="363"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="Zom-1k-DMJ">
+            <objects>
+                <viewController id="2ph-Nz-f7R" customClass="LoginViewController" customModule="MMInstagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="39M-e1-pdX"/>
+                        <viewControllerLayoutGuide type="bottom" id="9Ir-vC-9oC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MGQ-FS-Edc">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cFp-bs-G2x">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="294" width="400" height="345"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="swh-YB-A6M" kind="embed" id="EVF-Nn-CmU"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FpH-k6-sKD">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="294"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="h2b-cb-PZe" kind="embed" id="a7W-Aw-UK3"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="cFp-bs-G2x"/>
+                                <exclude reference="FpH-k6-sKD"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="cFp-bs-G2x"/>
+                                <include reference="FpH-k6-sKD"/>
                             </mask>
                         </variation>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="faU-OD-dxF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cim-31-oND" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="751.5" y="360"/>
+            <point key="canvasLocation" x="1653" y="363"/>
         </scene>
-        <!--View Controller-->
+        <!--Home-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="MMInstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="FeedViewController" customModule="MMInstagram" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -65,66 +129,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d08-Zj-uWg">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <items>
-                                    <barButtonItem image="home" id="wEH-gs-nxx"/>
-                                    <barButtonItem width="34" style="plain" systemItem="fixedSpace" id="Et6-bI-mpQ"/>
-                                    <barButtonItem image="explore" id="LyR-AK-Ng4"/>
-                                    <barButtonItem width="32" style="plain" systemItem="fixedSpace" id="Cl5-7a-j0l"/>
-                                    <barButtonItem systemItem="camera" id="jLO-zN-aE7"/>
-                                    <barButtonItem width="36" style="plain" systemItem="fixedSpace" id="fqf-FJ-YPJ"/>
-                                    <barButtonItem image="like" id="Pq3-9q-0TJ"/>
-                                    <barButtonItem width="36" style="plain" systemItem="fixedSpace" id="fIV-Lb-FlU"/>
-                                    <barButtonItem image="profile" id="51t-DH-YcR"/>
-                                </items>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vkx-hL-U9q">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="556" width="400" height="44"/>
+                                    <rect key="frame" x="0.0" y="404" width="400" height="152"/>
                                 </variation>
-                            </toolbar>
+                                <connections>
+                                    <segue destination="79v-ix-qqR" kind="embed" id="hvT-t9-7GF"/>
+                                </connections>
+                            </containerView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cuu-kO-VNp">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="64" width="400" height="341"/>
+                                </variation>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="d08-Zj-uWg"/>
+                                <exclude reference="Vkx-hL-U9q"/>
+                                <exclude reference="cuu-kO-VNp"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="d08-Zj-uWg"/>
+                                <include reference="Vkx-hL-U9q"/>
+                                <include reference="cuu-kO-VNp"/>
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="DXq-gz-lIx"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="tabbar-home-icon" id="tF5-uQ-PKa"/>
+                    <navigationItem key="navigationItem" title="Home" id="DXq-gz-lIx">
+                        <barButtonItem key="rightBarButtonItem" title="Inbox" id="6mI-Oa-wUE"/>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="2ph-Nz-f7R" kind="presentation" identifier="LoginSegue" id="iJx-wu-jti"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1375.5" y="363"/>
+            <point key="canvasLocation" x="2308.5" y="363"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="9Mp-2k-1eQ">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sYM-ml-zev" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lvL-pq-mUK">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="ro9-53-amh"/>
-                        <segue destination="ZNu-1x-1aL" kind="show" id="9OY-PZ-ehO"/>
-                        <segue destination="7RB-7o-kiA" kind="show" id="7yQ-Tk-GLI"/>
-                        <segue destination="fCI-XI-ahz" kind="show" id="jzN-Zl-WU6"/>
-                        <segue destination="56X-DR-RqT" kind="show" id="EKO-OO-hnH"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LvG-OO-vIc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2449.5" y="-366"/>
-        </scene>
-        <!--Explore View Controller-->
+        <!--Search-->
         <scene sceneID="Zwz-iH-pRw">
             <objects>
                 <viewController id="ZNu-1x-1aL" customClass="ExploreViewController" customModule="MMInstagram" customModuleProvider="target" sceneMemberID="viewController">
@@ -136,92 +183,196 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rn8-ri-ibP">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <items>
-                                    <barButtonItem image="home" id="5MH-6I-34f"/>
-                                    <barButtonItem width="34" style="plain" systemItem="fixedSpace" id="B2d-yf-EQZ"/>
-                                    <barButtonItem image="explore" id="QST-kU-1gO"/>
-                                    <barButtonItem width="32" style="plain" systemItem="fixedSpace" id="B46-FA-hSB"/>
-                                    <barButtonItem systemItem="camera" id="VJH-9m-W4f"/>
-                                    <barButtonItem width="36" style="plain" systemItem="fixedSpace" id="Xxl-Us-DFG"/>
-                                    <barButtonItem image="like" id="Xie-J1-ZRR"/>
-                                    <barButtonItem width="36" style="plain" systemItem="fixedSpace" id="z21-0G-2v2"/>
-                                    <barButtonItem image="profile" id="k83-kk-IWW"/>
-                                </items>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SF6-T2-qfZ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="9Lb-Tn-1iN">
+                                    <size key="itemSize" width="102" height="92"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="2FA-u7-2px">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="102" height="92"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="4Kz-hd-lSl">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="102" height="92"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="uRl-ZY-u7J">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="102" height="92"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="cFg-wM-MIu">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="102" height="92"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="9sY-AT-f74">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="102" height="92"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="pXq-25-saf">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="102" height="92"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="WGj-JP-AeX">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="102" height="92"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="6O2-6q-H2e">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="102" height="92"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="l0t-9G-fmh">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="102" height="92"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="6zV-kS-D3L">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="102" height="92"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="oc2-i7-8dS">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="102" height="92"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="b1U-36-M5t">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="102" height="92"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </collectionViewCell>
+                                </cells>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="556" width="400" height="44"/>
+                                    <rect key="frame" x="0.0" y="121" width="400" height="435"/>
                                 </variation>
-                            </toolbar>
+                            </collectionView>
+                            <searchBar contentMode="redraw" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="CZs-CC-Quh">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="20" width="400" height="44"/>
+                                </variation>
+                            </searchBar>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H2V-y0-94L">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="64" width="400" height="56"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="Vi6-7v-aEe" kind="embed" id="t8W-Qg-cHu"/>
+                                </connections>
+                            </containerView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="c8D-B0-Ajk">
+                                <rect key="frame" x="-61" y="-14" width="123" height="29"/>
+                                <segments>
+                                    <segment title="People"/>
+                                    <segment title="Hashtag"/>
+                                </segments>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="139" y="28" width="131" height="29"/>
+                                </variation>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="Rn8-ri-ibP"/>
+                                <exclude reference="SF6-T2-qfZ"/>
+                                <exclude reference="CZs-CC-Quh"/>
+                                <exclude reference="H2V-y0-94L"/>
+                                <exclude reference="c8D-B0-Ajk"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="Rn8-ri-ibP"/>
+                                <include reference="SF6-T2-qfZ"/>
+                                <include reference="CZs-CC-Quh"/>
+                                <include reference="H2V-y0-94L"/>
+                                <include reference="c8D-B0-Ajk"/>
                             </mask>
                         </variation>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Search" image="tabbar-search-icon" id="3Ha-3e-neI"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EhJ-bs-gg0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2029.5" y="363"/>
+            <point key="canvasLocation" x="2947.5" y="363"/>
         </scene>
-        <!--Activity View Controller-->
-        <scene sceneID="Iuw-5G-gor">
-            <objects>
-                <viewController id="7RB-7o-kiA" customClass="ActivityViewController" customModule="MMInstagram" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="7cS-ez-MqC"/>
-                        <viewControllerLayoutGuide type="bottom" id="Ypl-rB-ezq"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="uK8-NV-z6b">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V8o-k3-AcA">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <items>
-                                    <barButtonItem image="home" id="xfo-zl-982"/>
-                                    <barButtonItem width="34" style="plain" systemItem="fixedSpace" id="gef-qG-9sR"/>
-                                    <barButtonItem image="explore" id="qQZ-5t-MZ7"/>
-                                    <barButtonItem width="32" style="plain" systemItem="fixedSpace" id="BVn-3M-GrO"/>
-                                    <barButtonItem systemItem="camera" id="vdn-37-c64"/>
-                                    <barButtonItem width="36" style="plain" systemItem="fixedSpace" id="Gzg-1m-KpG"/>
-                                    <barButtonItem image="like" id="dxo-je-laT"/>
-                                    <barButtonItem width="36" style="plain" systemItem="fixedSpace" id="DAf-pI-fFH"/>
-                                    <barButtonItem image="profile" id="xvh-gQ-BMt"/>
-                                </items>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="556" width="400" height="44"/>
-                                </variation>
-                            </toolbar>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="V8o-k3-AcA"/>
-                            </mask>
-                        </variation>
-                        <variation key="widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="V8o-k3-AcA"/>
-                            </mask>
-                        </variation>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3Eb-LQ-iPZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2671.5" y="363"/>
-        </scene>
-        <!--View Controller-->
+        <!--Activity-->
         <scene sceneID="coo-h2-iNS">
             <objects>
-                <viewController id="fCI-XI-ahz" sceneMemberID="viewController">
+                <viewController id="fCI-XI-ahz" customClass="ActivityViewController" customModule="MMInstagram" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RuX-gv-uUp"/>
                         <viewControllerLayoutGuide type="bottom" id="4D3-5L-bv8"/>
@@ -230,42 +381,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="viR-sd-lXa">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <items>
-                                    <barButtonItem image="home" id="efC-WY-bsn"/>
-                                    <barButtonItem width="34" style="plain" systemItem="fixedSpace" id="fAy-Wz-Ich"/>
-                                    <barButtonItem image="explore" id="bod-j4-2ej"/>
-                                    <barButtonItem width="32" style="plain" systemItem="fixedSpace" id="EJG-qn-7nf"/>
-                                    <barButtonItem systemItem="camera" id="CW3-xu-hRI"/>
-                                    <barButtonItem width="36" style="plain" systemItem="fixedSpace" id="kA2-OZ-Uqk"/>
-                                    <barButtonItem image="like" id="79t-By-Yon"/>
-                                    <barButtonItem width="36" style="plain" systemItem="fixedSpace" id="g0d-x9-bMq"/>
-                                    <barButtonItem image="profile" id="Qzh-8U-hxE"/>
-                                </items>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="FAw-Um-vee">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="27" id="cIJ-fr-eY9">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cIJ-fr-eY9" id="DyD-ZW-uTr">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="42" id="AmZ-ma-mWn">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AmZ-ma-mWn" id="HyV-FT-es9">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="556" width="400" height="44"/>
+                                    <rect key="frame" x="0.0" y="12" width="400" height="652"/>
                                 </variation>
-                            </toolbar>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="viR-sd-lXa"/>
+                                <exclude reference="FAw-Um-vee"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="viR-sd-lXa"/>
+                                <include reference="FAw-Um-vee"/>
                             </mask>
                         </variation>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Activity" image="tabbar-activity-icon" id="euo-lg-TEb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jrw-nQ-b2z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3321" y="363"/>
+            <point key="canvasLocation" x="4227" y="363"/>
         </scene>
-        <!--Profile View Controller-->
+        <!--Profile-->
         <scene sceneID="RFD-ft-IHn">
             <objects>
                 <viewController id="56X-DR-RqT" customClass="ProfileViewController" customModule="MMInstagram" customModuleProvider="target" sceneMemberID="viewController">
@@ -276,47 +434,138 @@
                     <view key="view" contentMode="scaleToFill" id="wkd-CQ-Nxx">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profile" image="tabbar-profile-icon" id="2en-FD-vaT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="itr-Fe-1vJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4879.5" y="363"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="m6k-el-wxf">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="79v-ix-qqR" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="47h-o9-4Tr"/>
+                        <viewControllerLayoutGuide type="bottom" id="byw-rK-gUk"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="yIn-D5-36X">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HbR-FC-YcX">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <items>
-                                    <barButtonItem image="home" id="ckA-DB-gwA"/>
-                                    <barButtonItem width="34" style="plain" systemItem="fixedSpace" id="zhW-Rz-9CF"/>
-                                    <barButtonItem image="explore" id="fR7-qq-aQW"/>
-                                    <barButtonItem width="32" style="plain" systemItem="fixedSpace" id="bur-6n-vgk"/>
-                                    <barButtonItem systemItem="camera" id="4Oh-4T-ZdV"/>
-                                    <barButtonItem width="36" style="plain" systemItem="fixedSpace" id="mXr-F6-Iaz"/>
-                                    <barButtonItem image="like" id="6ml-vn-Khu"/>
-                                    <barButtonItem width="36" style="plain" systemItem="fixedSpace" id="EcJ-X2-bRj"/>
-                                    <barButtonItem image="profile" id="XMd-G0-txx"/>
-                                </items>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tL2-ax-zIe">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Find People to Follow">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="556" width="400" height="44"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                    <rect key="frame" x="77" y="20" width="246" height="30"/>
                                 </variation>
-                            </toolbar>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="HbR-FC-YcX"/>
+                                <exclude reference="tL2-ax-zIe"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="HbR-FC-YcX"/>
+                                <include reference="tL2-ax-zIe"/>
                             </mask>
                         </variation>
                     </view>
+                    <toolbarItems/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="itr-Fe-1vJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IvB-U1-11Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4062" y="360"/>
+            <point key="canvasLocation" x="2308.5" y="885"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="zs5-hH-bEX">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="WQR-Ml-MzR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Xrk-L2-a1f">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="viewControllers" id="ei5-ll-t8I"/>
+                        <segue destination="ZNu-1x-1aL" kind="relationship" relationship="viewControllers" id="6Fd-ej-a4h"/>
+                        <segue destination="fCI-XI-ahz" kind="relationship" relationship="viewControllers" id="5uo-DA-srb"/>
+                        <segue destination="56X-DR-RqT" kind="relationship" relationship="viewControllers" id="gWy-rG-V2g"/>
+                        <segue destination="Iby-cZ-vp5" kind="presentation" identifier="CameraSegue" id="dji-wl-2b9"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pWl-Vp-WY6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3853.5" y="-466"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="QhZ-0c-5Ol">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Vi6-7v-aEe" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IZt-WE-EhS"/>
+                        <viewControllerLayoutGuide type="bottom" id="mXs-GS-e3k"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="CPv-mj-fBB">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8OS-qZ-0KI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2770.5" y="-136"/>
+        </scene>
+        <!--Signup View Controller-->
+        <scene sceneID="nZC-cr-7yZ">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="swh-YB-A6M" customClass="SignupViewController" customModule="MMInstagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GPB-Cr-PTc"/>
+                        <viewControllerLayoutGuide type="bottom" id="0wu-PU-Mg2"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="a8J-k6-gyJ">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aaU-qn-2kr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1005" y="138.5"/>
+        </scene>
+        <!--Signin View Controller-->
+        <scene sceneID="eCs-cn-uid">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="h2b-cb-PZe" customClass="SigninViewController" customModule="MMInstagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sDz-cD-S99"/>
+                        <viewControllerLayoutGuide type="bottom" id="qA4-ZD-Qgk"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="asO-zd-21c">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KqU-U6-dUh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1021.5" y="533"/>
         </scene>
     </scenes>
     <resources>
-        <image name="explore" width="44" height="44"/>
-        <image name="home" width="44" height="44"/>
-        <image name="like" width="44" height="44"/>
-        <image name="profile" width="44" height="44"/>
+        <image name="cameraroll-default" width="44" height="44"/>
+        <image name="tabbar-activity-icon" width="64" height="45"/>
+        <image name="tabbar-home-icon" width="64" height="45"/>
+        <image name="tabbar-profile-icon" width="64" height="45"/>
+        <image name="tabbar-search-icon" width="64" height="45"/>
     </resources>
 </document>
