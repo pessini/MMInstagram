@@ -13,6 +13,9 @@
 		560A1C151AD329AB00C85F93 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 560A1C141AD329AB00C85F93 /* Images.xcassets */; };
 		560A1C181AD329AB00C85F93 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 560A1C161AD329AB00C85F93 /* LaunchScreen.xib */; };
 		560A1C241AD329AB00C85F93 /* MMInstagramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560A1C231AD329AB00C85F93 /* MMInstagramTests.swift */; };
+		C4A22FB51AD3728A009393B2 /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A22FB41AD3728A009393B2 /* ExploreViewController.swift */; };
+		C4A22FB71AD372A0009393B2 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A22FB61AD372A0009393B2 /* ActivityViewController.swift */; };
+		C4A22FB91AD372B9009393B2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A22FB81AD372B9009393B2 /* ProfileViewController.swift */; };
 		CEE50356E258A1672949B222 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 384FC5123BD8E01E2F96B41F /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +43,9 @@
 		560A1C221AD329AB00C85F93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		560A1C231AD329AB00C85F93 /* MMInstagramTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMInstagramTests.swift; sourceTree = "<group>"; };
 		5F9802965DFE68E2940680E3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		C4A22FB41AD3728A009393B2 /* ExploreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
+		C4A22FB61AD372A0009393B2 /* ActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
+		C4A22FB81AD372B9009393B2 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +101,9 @@
 				560A1C0D1AD329AB00C85F93 /* AppDelegate.swift */,
 				560A1C0F1AD329AB00C85F93 /* ViewController.swift */,
 				560A1C111AD329AB00C85F93 /* Main.storyboard */,
+				C4A22FB41AD3728A009393B2 /* ExploreViewController.swift */,
+				C4A22FB61AD372A0009393B2 /* ActivityViewController.swift */,
+				C4A22FB81AD372B9009393B2 /* ProfileViewController.swift */,
 				560A1C141AD329AB00C85F93 /* Images.xcassets */,
 				560A1C161AD329AB00C85F93 /* LaunchScreen.xib */,
 				560A1C0B1AD329AB00C85F93 /* Supporting Files */,
@@ -274,6 +283,9 @@
 			files = (
 				560A1C101AD329AB00C85F93 /* ViewController.swift in Sources */,
 				560A1C0E1AD329AB00C85F93 /* AppDelegate.swift in Sources */,
+				C4A22FB91AD372B9009393B2 /* ProfileViewController.swift in Sources */,
+				C4A22FB51AD3728A009393B2 /* ExploreViewController.swift in Sources */,
+				C4A22FB71AD372A0009393B2 /* ActivityViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

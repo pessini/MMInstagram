@@ -74,10 +74,10 @@
             </objects>
             <point key="canvasLocation" x="2449.5" y="-366"/>
         </scene>
-        <!--View Controller-->
+        <!--Explore View Controller-->
         <scene sceneID="Zwz-iH-pRw">
             <objects>
-                <viewController id="ZNu-1x-1aL" sceneMemberID="viewController">
+                <viewController id="ZNu-1x-1aL" customClass="ExploreViewController" customModule="MMInstagram" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VNn-R1-FrL"/>
                         <viewControllerLayoutGuide type="bottom" id="uHR-b6-7fj"/>
@@ -118,12 +118,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EhJ-bs-gg0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2139" y="363"/>
+            <point key="canvasLocation" x="2029.5" y="363"/>
         </scene>
-        <!--View Controller-->
+        <!--Activity View Controller-->
         <scene sceneID="Iuw-5G-gor">
             <objects>
-                <viewController id="7RB-7o-kiA" sceneMemberID="viewController">
+                <viewController id="7RB-7o-kiA" customClass="ActivityViewController" customModule="MMInstagram" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7cS-ez-MqC"/>
                         <viewControllerLayoutGuide type="bottom" id="Ypl-rB-ezq"/>
@@ -164,7 +164,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Eb-LQ-iPZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2758.5" y="363"/>
+            <point key="canvasLocation" x="2671.5" y="363"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="coo-h2-iNS">
@@ -210,12 +210,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jrw-nQ-b2z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3391.5" y="360"/>
+            <point key="canvasLocation" x="3321" y="363"/>
         </scene>
-        <!--View Controller-->
+        <!--Profile View Controller-->
         <scene sceneID="RFD-ft-IHn">
             <objects>
-                <viewController id="56X-DR-RqT" sceneMemberID="viewController">
+                <viewController id="56X-DR-RqT" customClass="ProfileViewController" customModule="MMInstagram" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ix8-Q3-GEF"/>
                         <viewControllerLayoutGuide type="bottom" id="1Hy-Qs-6nu"/>
