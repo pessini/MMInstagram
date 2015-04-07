@@ -14,16 +14,16 @@ class FeedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // creates an object and saves it in the Parse Backend
-        let testobj: PFObject = PFObject(className: "TestObject")
-        testobj["foo"] = "bar"
-        testobj.saveInBackgroundWithBlock(nil)
+
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewDidAppear(animated: Bool)
+    {
+        if PFUser.currentUser() == nil
+        {
+            self.performSegueWithIdentifier("LoginSegue", sender: nil)
+        }
+
     }
-    
     
 }

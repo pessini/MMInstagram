@@ -111,15 +111,8 @@
 			isa = PBXGroup;
 			children = (
 				560A1C0D1AD329AB00C85F93 /* AppDelegate.swift */,
-				C4E52FD61AD43F8A003D9743 /* FeedViewController.swift */,
-				560A1C111AD329AB00C85F93 /* Main.storyboard */,
-				C4E52FD81AD44053003D9743 /* LoginViewController.swift */,
-				C4E52FDC1AD4461E003D9743 /* SigninViewController.swift */,
-				C4A22FBC1AD37F9D009393B2 /* CameraViewController.swift */,
-				C4E52FDA1AD445F1003D9743 /* SignupViewController.swift */,
-				C4A22FB41AD3728A009393B2 /* ExploreViewController.swift */,
-				C4A22FB61AD372A0009393B2 /* ActivityViewController.swift */,
-				C4A22FB81AD372B9009393B2 /* ProfileViewController.swift */,
+				562364B91AD4556D00BC92CC /* View */,
+				562364BA1AD455D900BC92CC /* Controller */,
 				560A1C141AD329AB00C85F93 /* Images.xcassets */,
 				560A1C161AD329AB00C85F93 /* LaunchScreen.xib */,
 				560A1C0B1AD329AB00C85F93 /* Supporting Files */,
@@ -150,6 +143,29 @@
 				560A1C221AD329AB00C85F93 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		562364B91AD4556D00BC92CC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				560A1C111AD329AB00C85F93 /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		562364BA1AD455D900BC92CC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C4E52FD61AD43F8A003D9743 /* FeedViewController.swift */,
+				C4E52FD81AD44053003D9743 /* LoginViewController.swift */,
+				C4E52FDC1AD4461E003D9743 /* SigninViewController.swift */,
+				C4A22FBC1AD37F9D009393B2 /* CameraViewController.swift */,
+				C4E52FDA1AD445F1003D9743 /* SignupViewController.swift */,
+				C4A22FB41AD3728A009393B2 /* ExploreViewController.swift */,
+				C4A22FB61AD372A0009393B2 /* ActivityViewController.swift */,
+				C4A22FB81AD372B9009393B2 /* ProfileViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 		CF20B32A94FE14841719D7BC /* Pods */ = {
