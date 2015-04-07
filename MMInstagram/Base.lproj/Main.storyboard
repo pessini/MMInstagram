@@ -5,6 +5,54 @@
     </dependencies>
     <scenes>
         <!--View Controller-->
+        <scene sceneID="Xy5-V7-9gz">
+            <objects>
+                <viewController id="Iby-cZ-vp5" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4un-Tb-INR"/>
+                        <viewControllerLayoutGuide type="bottom" id="97W-N5-Oy0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="K8P-WT-UU5">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yNM-e3-uak">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="bookmarks" id="059-d7-4K6"/>
+                                    <barButtonItem width="129" style="plain" systemItem="fixedSpace" id="Yrf-Px-2sS"/>
+                                    <barButtonItem systemItem="camera" id="ExN-Pm-j6D"/>
+                                </items>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="556" width="400" height="44"/>
+                                </variation>
+                            </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="81B-kt-jJd">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="556"/>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="yNM-e3-uak"/>
+                                <exclude reference="81B-kt-jJd"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="yNM-e3-uak"/>
+                                <include reference="81B-kt-jJd"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="faU-OD-dxF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="751.5" y="360"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="MMInstagram" customModuleProvider="target" sceneMemberID="viewController">
@@ -15,11 +63,255 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d08-Zj-uWg">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <barButtonItem image="home" id="wEH-gs-nxx"/>
+                                    <barButtonItem width="34" style="plain" systemItem="fixedSpace" id="Et6-bI-mpQ"/>
+                                    <barButtonItem image="explore" id="LyR-AK-Ng4"/>
+                                    <barButtonItem width="32" style="plain" systemItem="fixedSpace" id="Cl5-7a-j0l"/>
+                                    <barButtonItem systemItem="camera" id="jLO-zN-aE7"/>
+                                    <barButtonItem width="36" style="plain" systemItem="fixedSpace" id="fqf-FJ-YPJ"/>
+                                    <barButtonItem image="like" id="Pq3-9q-0TJ"/>
+                                    <barButtonItem width="36" style="plain" systemItem="fixedSpace" id="fIV-Lb-FlU"/>
+                                    <barButtonItem image="profile" id="51t-DH-YcR"/>
+                                </items>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="556" width="400" height="44"/>
+                                </variation>
+                            </toolbar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="d08-Zj-uWg"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="d08-Zj-uWg"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="DXq-gz-lIx"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1375.5" y="363"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9Mp-2k-1eQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sYM-ml-zev" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lvL-pq-mUK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="ro9-53-amh"/>
+                        <segue destination="ZNu-1x-1aL" kind="show" id="9OY-PZ-ehO"/>
+                        <segue destination="7RB-7o-kiA" kind="show" id="7yQ-Tk-GLI"/>
+                        <segue destination="fCI-XI-ahz" kind="show" id="jzN-Zl-WU6"/>
+                        <segue destination="56X-DR-RqT" kind="show" id="EKO-OO-hnH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LvG-OO-vIc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2449.5" y="-366"/>
+        </scene>
+        <!--Explore View Controller-->
+        <scene sceneID="Zwz-iH-pRw">
+            <objects>
+                <viewController id="ZNu-1x-1aL" customClass="ExploreViewController" customModule="MMInstagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VNn-R1-FrL"/>
+                        <viewControllerLayoutGuide type="bottom" id="uHR-b6-7fj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="f6E-5G-9FL">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rn8-ri-ibP">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem image="home" id="5MH-6I-34f"/>
+                                    <barButtonItem width="34" style="plain" systemItem="fixedSpace" id="B2d-yf-EQZ"/>
+                                    <barButtonItem image="explore" id="QST-kU-1gO"/>
+                                    <barButtonItem width="32" style="plain" systemItem="fixedSpace" id="B46-FA-hSB"/>
+                                    <barButtonItem systemItem="camera" id="VJH-9m-W4f"/>
+                                    <barButtonItem width="36" style="plain" systemItem="fixedSpace" id="Xxl-Us-DFG"/>
+                                    <barButtonItem image="like" id="Xie-J1-ZRR"/>
+                                    <barButtonItem width="36" style="plain" systemItem="fixedSpace" id="z21-0G-2v2"/>
+                                    <barButtonItem image="profile" id="k83-kk-IWW"/>
+                                </items>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="556" width="400" height="44"/>
+                                </variation>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Rn8-ri-ibP"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Rn8-ri-ibP"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EhJ-bs-gg0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2029.5" y="363"/>
+        </scene>
+        <!--Activity View Controller-->
+        <scene sceneID="Iuw-5G-gor">
+            <objects>
+                <viewController id="7RB-7o-kiA" customClass="ActivityViewController" customModule="MMInstagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7cS-ez-MqC"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ypl-rB-ezq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uK8-NV-z6b">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V8o-k3-AcA">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem image="home" id="xfo-zl-982"/>
+                                    <barButtonItem width="34" style="plain" systemItem="fixedSpace" id="gef-qG-9sR"/>
+                                    <barButtonItem image="explore" id="qQZ-5t-MZ7"/>
+                                    <barButtonItem width="32" style="plain" systemItem="fixedSpace" id="BVn-3M-GrO"/>
+                                    <barButtonItem systemItem="camera" id="vdn-37-c64"/>
+                                    <barButtonItem width="36" style="plain" systemItem="fixedSpace" id="Gzg-1m-KpG"/>
+                                    <barButtonItem image="like" id="dxo-je-laT"/>
+                                    <barButtonItem width="36" style="plain" systemItem="fixedSpace" id="DAf-pI-fFH"/>
+                                    <barButtonItem image="profile" id="xvh-gQ-BMt"/>
+                                </items>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="556" width="400" height="44"/>
+                                </variation>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="V8o-k3-AcA"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="V8o-k3-AcA"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Eb-LQ-iPZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2671.5" y="363"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="coo-h2-iNS">
+            <objects>
+                <viewController id="fCI-XI-ahz" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RuX-gv-uUp"/>
+                        <viewControllerLayoutGuide type="bottom" id="4D3-5L-bv8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Lhx-Un-jx0">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="viR-sd-lXa">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem image="home" id="efC-WY-bsn"/>
+                                    <barButtonItem width="34" style="plain" systemItem="fixedSpace" id="fAy-Wz-Ich"/>
+                                    <barButtonItem image="explore" id="bod-j4-2ej"/>
+                                    <barButtonItem width="32" style="plain" systemItem="fixedSpace" id="EJG-qn-7nf"/>
+                                    <barButtonItem systemItem="camera" id="CW3-xu-hRI"/>
+                                    <barButtonItem width="36" style="plain" systemItem="fixedSpace" id="kA2-OZ-Uqk"/>
+                                    <barButtonItem image="like" id="79t-By-Yon"/>
+                                    <barButtonItem width="36" style="plain" systemItem="fixedSpace" id="g0d-x9-bMq"/>
+                                    <barButtonItem image="profile" id="Qzh-8U-hxE"/>
+                                </items>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="556" width="400" height="44"/>
+                                </variation>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="viR-sd-lXa"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="viR-sd-lXa"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jrw-nQ-b2z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3321" y="363"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="RFD-ft-IHn">
+            <objects>
+                <viewController id="56X-DR-RqT" customClass="ProfileViewController" customModule="MMInstagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ix8-Q3-GEF"/>
+                        <viewControllerLayoutGuide type="bottom" id="1Hy-Qs-6nu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wkd-CQ-Nxx">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HbR-FC-YcX">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem image="home" id="ckA-DB-gwA"/>
+                                    <barButtonItem width="34" style="plain" systemItem="fixedSpace" id="zhW-Rz-9CF"/>
+                                    <barButtonItem image="explore" id="fR7-qq-aQW"/>
+                                    <barButtonItem width="32" style="plain" systemItem="fixedSpace" id="bur-6n-vgk"/>
+                                    <barButtonItem systemItem="camera" id="4Oh-4T-ZdV"/>
+                                    <barButtonItem width="36" style="plain" systemItem="fixedSpace" id="mXr-F6-Iaz"/>
+                                    <barButtonItem image="like" id="6ml-vn-Khu"/>
+                                    <barButtonItem width="36" style="plain" systemItem="fixedSpace" id="EcJ-X2-bRj"/>
+                                    <barButtonItem image="profile" id="XMd-G0-txx"/>
+                                </items>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="556" width="400" height="44"/>
+                                </variation>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="HbR-FC-YcX"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="HbR-FC-YcX"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="itr-Fe-1vJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4062" y="360"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="explore" width="44" height="44"/>
+        <image name="home" width="44" height="44"/>
+        <image name="like" width="44" height="44"/>
+        <image name="profile" width="44" height="44"/>
+    </resources>
 </document>
