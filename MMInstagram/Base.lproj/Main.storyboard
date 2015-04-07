@@ -13,6 +13,7 @@
                         <viewControllerLayoutGuide type="bottom" id="97W-N5-Oy0"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="K8P-WT-UU5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yNM-e3-uak">
@@ -132,6 +133,7 @@
                         <viewControllerLayoutGuide type="bottom" id="uHR-b6-7fj"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="f6E-5G-9FL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rn8-ri-ibP">
@@ -178,6 +180,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Ypl-rB-ezq"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="uK8-NV-z6b">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V8o-k3-AcA">
@@ -224,6 +227,7 @@
                         <viewControllerLayoutGuide type="bottom" id="4D3-5L-bv8"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Lhx-Un-jx0">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="viR-sd-lXa">
@@ -270,6 +274,7 @@
                         <viewControllerLayoutGuide type="bottom" id="1Hy-Qs-6nu"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="wkd-CQ-Nxx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HbR-FC-YcX">
