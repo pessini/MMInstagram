@@ -16,6 +16,7 @@
 		C4A22FB51AD3728A009393B2 /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A22FB41AD3728A009393B2 /* ExploreViewController.swift */; };
 		C4A22FB71AD372A0009393B2 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A22FB61AD372A0009393B2 /* ActivityViewController.swift */; };
 		C4A22FB91AD372B9009393B2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A22FB81AD372B9009393B2 /* ProfileViewController.swift */; };
+		C4A22FBB1AD379EA009393B2 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A22FBA1AD379EA009393B2 /* Camera.swift */; };
 		CEE50356E258A1672949B222 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 384FC5123BD8E01E2F96B41F /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,7 @@
 		C4A22FB41AD3728A009393B2 /* ExploreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		C4A22FB61AD372A0009393B2 /* ActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 		C4A22FB81AD372B9009393B2 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		C4A22FBA1AD379EA009393B2 /* Camera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				560A1C0D1AD329AB00C85F93 /* AppDelegate.swift */,
 				560A1C0F1AD329AB00C85F93 /* ViewController.swift */,
 				560A1C111AD329AB00C85F93 /* Main.storyboard */,
+				C4A22FBA1AD379EA009393B2 /* Camera.swift */,
 				C4A22FB41AD3728A009393B2 /* ExploreViewController.swift */,
 				C4A22FB61AD372A0009393B2 /* ActivityViewController.swift */,
 				C4A22FB81AD372B9009393B2 /* ProfileViewController.swift */,
@@ -283,6 +286,7 @@
 			files = (
 				560A1C101AD329AB00C85F93 /* ViewController.swift in Sources */,
 				560A1C0E1AD329AB00C85F93 /* AppDelegate.swift in Sources */,
+				C4A22FBB1AD379EA009393B2 /* Camera.swift in Sources */,
 				C4A22FB91AD372B9009393B2 /* ProfileViewController.swift in Sources */,
 				C4A22FB51AD3728A009393B2 /* ExploreViewController.swift in Sources */,
 				C4A22FB71AD372A0009393B2 /* ActivityViewController.swift in Sources */,

@@ -5,6 +5,54 @@
     </dependencies>
     <scenes>
         <!--View Controller-->
+        <scene sceneID="Xy5-V7-9gz">
+            <objects>
+                <viewController id="Iby-cZ-vp5" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4un-Tb-INR"/>
+                        <viewControllerLayoutGuide type="bottom" id="97W-N5-Oy0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="K8P-WT-UU5">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yNM-e3-uak">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="bookmarks" id="059-d7-4K6"/>
+                                    <barButtonItem width="129" style="plain" systemItem="fixedSpace" id="Yrf-Px-2sS"/>
+                                    <barButtonItem systemItem="camera" id="ExN-Pm-j6D"/>
+                                </items>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="556" width="400" height="44"/>
+                                </variation>
+                            </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="81B-kt-jJd">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="556"/>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="yNM-e3-uak"/>
+                                <exclude reference="81B-kt-jJd"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="yNM-e3-uak"/>
+                                <include reference="81B-kt-jJd"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="faU-OD-dxF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="751.5" y="360"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="MMInstagram" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,6 +66,7 @@
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d08-Zj-uWg">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
                                     <barButtonItem image="home" id="wEH-gs-nxx"/>
                                     <barButtonItem width="34" style="plain" systemItem="fixedSpace" id="Et6-bI-mpQ"/>
