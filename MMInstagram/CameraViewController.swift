@@ -56,15 +56,4 @@ class CameraViewController: UIViewController, UINavigationControllerDelegate, UI
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+}

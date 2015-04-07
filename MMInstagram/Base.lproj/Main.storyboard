@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D130a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="sYM-ml-zev">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D130a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <scenes>
-        <!--Camera View Controller-->
+        <!--Item-->
         <scene sceneID="Xy5-V7-9gz">
             <objects>
                 <viewController id="Iby-cZ-vp5" customClass="CameraViewController" customModule="MMInstagram" customModuleProvider="target" sceneMemberID="viewController">
@@ -16,17 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yNM-e3-uak">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <items>
-                                    <barButtonItem systemItem="bookmarks" id="059-d7-4K6"/>
-                                    <barButtonItem width="129" style="plain" systemItem="fixedSpace" id="Yrf-Px-2sS"/>
-                                    <barButtonItem systemItem="camera" id="ExN-Pm-j6D"/>
-                                </items>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="556" width="400" height="44"/>
-                                </variation>
-                            </toolbar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="81B-kt-jJd">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
@@ -42,36 +31,96 @@
                                     <rect key="frame" x="0.0" y="0.0" width="400" height="44"/>
                                 </variation>
                             </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fp6-51-jDa">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem image="cameraroll-default" id="S37-Ab-kIZ"/>
+                                    <barButtonItem width="108" style="plain" systemItem="fixedSpace" id="piq-SZ-1w3"/>
+                                    <barButtonItem systemItem="camera" id="O1R-cd-CZV"/>
+                                </items>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="556" width="400" height="44"/>
+                                </variation>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="yNM-e3-uak"/>
                                 <exclude reference="81B-kt-jJd"/>
                                 <exclude reference="kRv-JY-b12"/>
+                                <exclude reference="fp6-51-jDa"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="yNM-e3-uak"/>
                                 <include reference="81B-kt-jJd"/>
                                 <include reference="kRv-JY-b12"/>
+                                <include reference="fp6-51-jDa"/>
                             </mask>
                         </variation>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="LmR-FB-g9z"/>
                     <connections>
-                        <outlet property="cameraButton" destination="ExN-Pm-j6D" id="YZL-Sw-WKV"/>
                         <outlet property="imageView" destination="81B-kt-jJd" id="fxn-fx-Kcx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="faU-OD-dxF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2661" y="363"/>
+            <point key="canvasLocation" x="3579" y="363"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="Zom-1k-DMJ">
+            <objects>
+                <viewController id="2ph-Nz-f7R" customClass="LoginViewController" customModule="MMInstagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="39M-e1-pdX"/>
+                        <viewControllerLayoutGuide type="bottom" id="9Ir-vC-9oC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MGQ-FS-Edc">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cFp-bs-G2x">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="294" width="400" height="345"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="swh-YB-A6M" kind="embed" id="EVF-Nn-CmU"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FpH-k6-sKD">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="294"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="h2b-cb-PZe" kind="embed" id="a7W-Aw-UK3"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="cFp-bs-G2x"/>
+                                <exclude reference="FpH-k6-sKD"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="cFp-bs-G2x"/>
+                                <include reference="FpH-k6-sKD"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cim-31-oND" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1653" y="363"/>
         </scene>
         <!--Home-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="MMInstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="FeedViewController" customModule="MMInstagram" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -80,24 +129,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d08-Zj-uWg">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <items>
-                                    <barButtonItem image="tabbar-home-icon" id="wEH-gs-nxx"/>
-                                    <barButtonItem style="plain" systemItem="fixedSpace" id="9e1-4g-58E"/>
-                                    <barButtonItem image="tabbar-search-icon" id="LyR-AK-Ng4"/>
-                                    <barButtonItem width="21" style="plain" systemItem="fixedSpace" id="MuU-lN-cFY"/>
-                                    <barButtonItem systemItem="camera" id="jLO-zN-aE7"/>
-                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="f66-My-CtQ"/>
-                                    <barButtonItem image="tabbar-activity-icon" id="Pq3-9q-0TJ"/>
-                                    <barButtonItem width="10" style="plain" systemItem="fixedSpace" id="Yps-GR-70j"/>
-                                    <barButtonItem image="tabbar-profile-icon" id="51t-DH-YcR"/>
-                                </items>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="556" width="400" height="44"/>
-                                </variation>
-                            </toolbar>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vkx-hL-U9q">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
@@ -117,50 +148,30 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="d08-Zj-uWg"/>
                                 <exclude reference="Vkx-hL-U9q"/>
                                 <exclude reference="cuu-kO-VNp"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="d08-Zj-uWg"/>
                                 <include reference="Vkx-hL-U9q"/>
                                 <include reference="cuu-kO-VNp"/>
                             </mask>
                         </variation>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="tabbar-home-icon" id="tF5-uQ-PKa"/>
                     <navigationItem key="navigationItem" title="Home" id="DXq-gz-lIx">
                         <barButtonItem key="rightBarButtonItem" title="Inbox" id="6mI-Oa-wUE"/>
                     </navigationItem>
+                    <connections>
+                        <segue destination="2ph-Nz-f7R" kind="presentation" identifier="LoginSegue" id="iJx-wu-jti"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1375.5" y="363"/>
+            <point key="canvasLocation" x="2308.5" y="363"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="9Mp-2k-1eQ">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sYM-ml-zev" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lvL-pq-mUK">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="ro9-53-amh"/>
-                        <segue destination="ZNu-1x-1aL" kind="show" id="9OY-PZ-ehO"/>
-                        <segue destination="fCI-XI-ahz" kind="show" id="jzN-Zl-WU6"/>
-                        <segue destination="56X-DR-RqT" kind="show" id="EKO-OO-hnH"/>
-                        <segue destination="Iby-cZ-vp5" kind="presentation" id="96L-pL-OQE"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LvG-OO-vIc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2449.5" y="-366"/>
-        </scene>
-        <!--Explore View Controller-->
+        <!--Search-->
         <scene sceneID="Zwz-iH-pRw">
             <objects>
                 <viewController id="ZNu-1x-1aL" customClass="ExploreViewController" customModule="MMInstagram" customModuleProvider="target" sceneMemberID="viewController">
@@ -172,24 +183,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4jr-mW-GAf">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <items>
-                                    <barButtonItem image="tabbar-home-icon" id="HDg-JJ-6N5"/>
-                                    <barButtonItem style="plain" systemItem="fixedSpace" id="NAs-pr-7lG"/>
-                                    <barButtonItem image="tabbar-search-icon" id="RvY-Py-sij"/>
-                                    <barButtonItem width="21" style="plain" systemItem="fixedSpace" id="oHh-x0-3js"/>
-                                    <barButtonItem systemItem="camera" id="lrd-uQ-8mp"/>
-                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="40N-V7-BO2"/>
-                                    <barButtonItem image="tabbar-activity-icon" id="zQa-nB-2AQ"/>
-                                    <barButtonItem width="10" style="plain" systemItem="fixedSpace" id="jdt-En-2Zo"/>
-                                    <barButtonItem image="tabbar-profile-icon" id="px1-Zi-22t"/>
-                                </items>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="556" width="400" height="44"/>
-                                </variation>
-                            </toolbar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SF6-T2-qfZ">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -322,30 +315,61 @@
                                     </collectionViewCell>
                                 </cells>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="64" width="400" height="492"/>
+                                    <rect key="frame" x="0.0" y="121" width="400" height="435"/>
                                 </variation>
                             </collectionView>
+                            <searchBar contentMode="redraw" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="CZs-CC-Quh">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="20" width="400" height="44"/>
+                                </variation>
+                            </searchBar>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H2V-y0-94L">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="64" width="400" height="56"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="Vi6-7v-aEe" kind="embed" id="t8W-Qg-cHu"/>
+                                </connections>
+                            </containerView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="c8D-B0-Ajk">
+                                <rect key="frame" x="-61" y="-14" width="123" height="29"/>
+                                <segments>
+                                    <segment title="People"/>
+                                    <segment title="Hashtag"/>
+                                </segments>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="139" y="28" width="131" height="29"/>
+                                </variation>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="4jr-mW-GAf"/>
                                 <exclude reference="SF6-T2-qfZ"/>
+                                <exclude reference="CZs-CC-Quh"/>
+                                <exclude reference="H2V-y0-94L"/>
+                                <exclude reference="c8D-B0-Ajk"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="4jr-mW-GAf"/>
                                 <include reference="SF6-T2-qfZ"/>
+                                <include reference="CZs-CC-Quh"/>
+                                <include reference="H2V-y0-94L"/>
+                                <include reference="c8D-B0-Ajk"/>
                             </mask>
                         </variation>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Search" image="tabbar-search-icon" id="3Ha-3e-neI"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EhJ-bs-gg0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2029.5" y="363"/>
+            <point key="canvasLocation" x="2947.5" y="363"/>
         </scene>
-        <!--Activity View Controller-->
+        <!--Activity-->
         <scene sceneID="coo-h2-iNS">
             <objects>
                 <viewController id="fCI-XI-ahz" customClass="ActivityViewController" customModule="MMInstagram" customModuleProvider="target" sceneMemberID="viewController">
@@ -380,45 +404,26 @@
                                     <rect key="frame" x="0.0" y="12" width="400" height="652"/>
                                 </variation>
                             </tableView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QEJ-8h-5hI">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <items>
-                                    <barButtonItem image="tabbar-home-icon" id="NkX-6A-9uc"/>
-                                    <barButtonItem style="plain" systemItem="fixedSpace" id="mmp-bq-WHW"/>
-                                    <barButtonItem image="tabbar-search-icon" id="Vno-82-kOq"/>
-                                    <barButtonItem width="21" style="plain" systemItem="fixedSpace" id="gn8-dl-R7x"/>
-                                    <barButtonItem systemItem="camera" id="FMZ-Kk-Z5f"/>
-                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="hcm-Yz-jA3"/>
-                                    <barButtonItem image="tabbar-activity-icon" id="25b-EG-XOc"/>
-                                    <barButtonItem width="10" style="plain" systemItem="fixedSpace" id="s5q-ee-5Ig"/>
-                                    <barButtonItem image="tabbar-profile-icon" id="IWG-se-DWa"/>
-                                </items>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="556" width="400" height="44"/>
-                                </variation>
-                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="FAw-Um-vee"/>
-                                <exclude reference="QEJ-8h-5hI"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="FAw-Um-vee"/>
-                                <include reference="QEJ-8h-5hI"/>
                             </mask>
                         </variation>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Activity" image="tabbar-activity-icon" id="euo-lg-TEb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jrw-nQ-b2z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3309" y="363"/>
+            <point key="canvasLocation" x="4227" y="363"/>
         </scene>
-        <!--Profile View Controller-->
+        <!--Profile-->
         <scene sceneID="RFD-ft-IHn">
             <objects>
                 <viewController id="56X-DR-RqT" customClass="ProfileViewController" customModule="MMInstagram" customModuleProvider="target" sceneMemberID="viewController">
@@ -429,42 +434,13 @@
                     <view key="view" contentMode="scaleToFill" id="wkd-CQ-Nxx">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HFu-ad-nmz">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <items>
-                                    <barButtonItem image="tabbar-home-icon" id="SBG-KA-Q2P"/>
-                                    <barButtonItem style="plain" systemItem="fixedSpace" id="0Yh-L8-RPD"/>
-                                    <barButtonItem image="tabbar-search-icon" id="6Ba-jn-vuH"/>
-                                    <barButtonItem width="21" style="plain" systemItem="fixedSpace" id="L0Y-rt-joG"/>
-                                    <barButtonItem systemItem="camera" id="jVg-lr-Utg"/>
-                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="4Zf-gg-1cN"/>
-                                    <barButtonItem image="tabbar-activity-icon" id="Vwv-LM-Emg"/>
-                                    <barButtonItem width="10" style="plain" systemItem="fixedSpace" id="HFw-wP-AuM"/>
-                                    <barButtonItem image="tabbar-profile-icon" id="jf6-TG-dxs"/>
-                                </items>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="556" width="400" height="44"/>
-                                </variation>
-                            </toolbar>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="HFu-ad-nmz"/>
-                            </mask>
-                        </variation>
-                        <variation key="widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="HFu-ad-nmz"/>
-                            </mask>
-                        </variation>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Profile" image="tabbar-profile-icon" id="2en-FD-vaT"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="itr-Fe-1vJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3961.5" y="363"/>
+            <point key="canvasLocation" x="4879.5" y="363"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="m6k-el-wxf">
@@ -475,6 +451,7 @@
                         <viewControllerLayoutGuide type="bottom" id="byw-rK-gUk"/>
                     </layoutGuides>
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="yIn-D5-36X">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tL2-ax-zIe">
@@ -505,10 +482,87 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IvB-U1-11Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1375.5" y="969"/>
+            <point key="canvasLocation" x="2308.5" y="885"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="zs5-hH-bEX">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="WQR-Ml-MzR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Xrk-L2-a1f">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="viewControllers" id="ei5-ll-t8I"/>
+                        <segue destination="ZNu-1x-1aL" kind="relationship" relationship="viewControllers" id="6Fd-ej-a4h"/>
+                        <segue destination="fCI-XI-ahz" kind="relationship" relationship="viewControllers" id="5uo-DA-srb"/>
+                        <segue destination="56X-DR-RqT" kind="relationship" relationship="viewControllers" id="gWy-rG-V2g"/>
+                        <segue destination="Iby-cZ-vp5" kind="presentation" identifier="CameraSegue" id="dji-wl-2b9"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pWl-Vp-WY6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3853.5" y="-466"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="QhZ-0c-5Ol">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Vi6-7v-aEe" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IZt-WE-EhS"/>
+                        <viewControllerLayoutGuide type="bottom" id="mXs-GS-e3k"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="CPv-mj-fBB">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8OS-qZ-0KI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2770.5" y="-136"/>
+        </scene>
+        <!--Signup View Controller-->
+        <scene sceneID="nZC-cr-7yZ">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="swh-YB-A6M" customClass="SignupViewController" customModule="MMInstagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GPB-Cr-PTc"/>
+                        <viewControllerLayoutGuide type="bottom" id="0wu-PU-Mg2"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="a8J-k6-gyJ">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aaU-qn-2kr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1005" y="138.5"/>
+        </scene>
+        <!--Signin View Controller-->
+        <scene sceneID="eCs-cn-uid">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="h2b-cb-PZe" customClass="SigninViewController" customModule="MMInstagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sDz-cD-S99"/>
+                        <viewControllerLayoutGuide type="bottom" id="qA4-ZD-Qgk"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="asO-zd-21c">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KqU-U6-dUh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1021.5" y="533"/>
         </scene>
     </scenes>
     <resources>
+        <image name="cameraroll-default" width="44" height="44"/>
         <image name="tabbar-activity-icon" width="64" height="45"/>
         <image name="tabbar-home-icon" width="64" height="45"/>
         <image name="tabbar-profile-icon" width="64" height="45"/>
