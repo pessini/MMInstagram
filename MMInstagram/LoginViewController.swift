@@ -7,29 +7,54 @@
 //
 
 import UIKit
+import Parse
 
 class LoginViewController: UIViewController {
 
-    override func viewDidLoad() {
+    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+    @IBAction func onLogInButtonTapped(sender: UIButton)
+    {
 
-    /*
-    // MARK: - Navigation
+        PFUser.logInWithUsernameInBackground(usernameTextField.text, password: passwordTextField.text) { (returnedUser, returnedError) -> Void in
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+            if returnedError == nil
+            {
+                self.dismissViewControllerAnimated(true, completion: nil)
+            }
+            else
+            {
+                self.showAlert("There was an error with your login", error: returnedError)
+            }
+        }
     }
-    */
+
+    // MARK: Helper Method
+
+    func showAlert(message: String, error: NSError)
+    {
+        let alert = UIAlertController(title: message, message: error.localizedDescription, preferredStyle: .Alert)
+        let okAction = UIAlertAction(title: "Ok", style: .Cancel, handler: nil)
+        alert.addAction(okAction)
+        presentViewController(alert, animated: true, completion: nil)
+    }
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        if segue.identifier == "ShowSignUpSegue"
+        {
+            let vc = segue.destinationViewController as SignUpViewController
+            vc.prevUsername = self.usernameTextField.text
+            vc.prevPassword = self.passwordTextField.text
+        }
+    }
+
 
 }
