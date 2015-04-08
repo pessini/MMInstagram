@@ -7,53 +7,62 @@
 //
 
 import UIKit
-import MobileCoreServices
 
-class CameraViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
-
-    @IBOutlet var imageView: UIImageView!
-    var images : [UIImage] = []
-    var controller : UIImagePickerController?
+class CameraViewController: UIViewController{
 
 
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
 
-    @IBAction func takePhotoAction(sender: AnyObject) {
-        if isCameraAvailable() {
-            let imagePickerController: UIImagePickerController = UIImagePickerController()
+        // create fictitious posts
 
-            imagePickerController.sourceType = .Camera
-            imagePickerController.mediaTypes = [kUTTypeImage as String]
-            imagePickerController.allowsEditing = true
-            imagePickerController.delegate = self
+        /*
+            We have two classes on Parse to store from a post
+        
+            Class 1 - Post
+            - User who is posting
+            - message
+        
+            Class 2 - Photo
+            - Post which belongs it
+            - Photo itself
+            - Location (GeoPoint)
 
-            presentViewController(imagePickerController, animated: true, completion: nil)
-        } else {
-            println("Camera is not available")
+
+
+
+        var newPost = PFObject(className:"Post")
+        newPost["user"] = PFUser.query().getObjectWithId("yLsKDKrKpE")
+        newPost["message"] = "Just another photo, ok?"
+
+        var newPhoto = PFObject(className: "Photo")
+        newPhoto["post"] = newPost // // Add a relation between the Post and Photo
+        // I'm getting an image from my Assets folder but you have to get the image saved
+        // quite simples like (self.postImageView.image)
+        let imageData = UIImageJPEGRepresentation(UIImage(named: "matt2"), 1.0)
+        if imageData != nil
+        {
+            let imageFile = PFFile(data: imageData)
+            newPhoto.setObject(imageFile, forKey: "photo")
         }
+        let point = PFGeoPoint(latitude:40.0, longitude:-30.0)
+        newPhoto["location"] = point
+        
+        // This will save both newPost and newPhoto or it should :)
+        newPhoto.saveInBackgroundWithBlock {
+            (success: Bool, error: NSError!) -> Void in
+            if (success)
+            {
+               println("YEAH babe")
+            }
+            else
+            {
+               println("UGHR ERROR")
+            }
+        }
+*/
+
     }
-
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]){
-        var currentImage: UIImage!
-        currentImage = info[UIImagePickerControllerEditedImage] as UIImage
-
-        images.append(currentImage)
-        println("Image stored in array")
-        println("Number of stored images: \(images.count)")
-
-        picker.dismissViewControllerAnimated(true, completion: nil)
-    }
-
-    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
-        picker.dismissViewControllerAnimated(true, completion: nil)
-    }
-
-    func isCameraAvailable() -> Bool{
-        return UIImagePickerController.isSourceTypeAvailable(.Camera)
-    }
-
 
 }

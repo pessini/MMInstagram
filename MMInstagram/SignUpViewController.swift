@@ -65,12 +65,12 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
     {
         let actionSheet = UIActionSheet(title: nil, delegate: self, cancelButtonTitle: nil, destructiveButtonTitle: nil)
 
-        if (UIImagePickerController .isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary))
+        if (UIImagePickerController .isSourceTypeAvailable(.PhotoLibrary))
         {
             actionSheet.addButtonWithTitle("Photo Library")
         }
 
-        if (UIImagePickerController .isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera))
+        if (UIImagePickerController .isSourceTypeAvailable(.Camera))
         {
             actionSheet.addButtonWithTitle("Camera Roll")
         }

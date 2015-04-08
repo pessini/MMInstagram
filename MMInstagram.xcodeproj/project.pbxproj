@@ -12,6 +12,7 @@
 		560A1C151AD329AB00C85F93 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 560A1C141AD329AB00C85F93 /* Images.xcassets */; };
 		560A1C181AD329AB00C85F93 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 560A1C161AD329AB00C85F93 /* LaunchScreen.xib */; };
 		560A1C241AD329AB00C85F93 /* MMInstagramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560A1C231AD329AB00C85F93 /* MMInstagramTests.swift */; };
+		561D79621AD5B0E70086E568 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561D79611AD5B0E70086E568 /* PostTableViewCell.swift */; };
 		562364BC1AD46E7700BC92CC /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562364BB1AD46E7700BC92CC /* SignUpViewController.swift */; };
 		56BC66331AD4E16A00CE18F7 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56BC662F1AD4E16A00CE18F7 /* FacebookSDK.framework */; };
 		56BC66341AD4E16A00CE18F7 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56BC66301AD4E16A00CE18F7 /* FBSDKCoreKit.framework */; };
@@ -62,6 +63,7 @@
 		560A1C1D1AD329AB00C85F93 /* MMInstagramTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MMInstagramTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		560A1C221AD329AB00C85F93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		560A1C231AD329AB00C85F93 /* MMInstagramTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMInstagramTests.swift; sourceTree = "<group>"; };
+		561D79611AD5B0E70086E568 /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		562364BB1AD46E7700BC92CC /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		56BC662B1AD4DF7600CE18F7 /* MMInstagram-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MMInstagram-Bridging-Header.h"; sourceTree = "<group>"; };
 		56BC662F1AD4E16A00CE18F7 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = MMInstagram/FacebookSDK.framework; sourceTree = "<group>"; };
@@ -218,6 +220,55 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		561D795C1AD59BA10086E568 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				C4A22FBC1AD37F9D009393B2 /* CameraViewController.swift */,
+			);
+			name = Post;
+			sourceTree = "<group>";
+		};
+		561D795D1AD59CE60086E568 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				C4A22FB41AD3728A009393B2 /* ExploreViewController.swift */,
+			);
+			name = Search;
+			sourceTree = "<group>";
+		};
+		561D795E1AD59CED0086E568 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				C4A22FB81AD372B9009393B2 /* ProfileViewController.swift */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
+		561D795F1AD59CF30086E568 /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				C4A22FB61AD372A0009393B2 /* ActivityViewController.swift */,
+			);
+			name = Activity;
+			sourceTree = "<group>";
+		};
+		561D79601AD59CFA0086E568 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				561D79631AD5E48F0086E568 /* Custom */,
+				C4E52FD61AD43F8A003D9743 /* FeedViewController.swift */,
+			);
+			name = Feed;
+			sourceTree = "<group>";
+		};
+		561D79631AD5E48F0086E568 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				561D79611AD5B0E70086E568 /* PostTableViewCell.swift */,
+			);
+			name = Custom;
+			sourceTree = "<group>";
+		};
 		562364B91AD4556D00BC92CC /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -230,11 +281,11 @@
 			isa = PBXGroup;
 			children = (
 				562364BD1AD46E8100BC92CC /* Login */,
-				C4E52FD61AD43F8A003D9743 /* FeedViewController.swift */,
-				C4A22FBC1AD37F9D009393B2 /* CameraViewController.swift */,
-				C4A22FB41AD3728A009393B2 /* ExploreViewController.swift */,
-				C4A22FB61AD372A0009393B2 /* ActivityViewController.swift */,
-				C4A22FB81AD372B9009393B2 /* ProfileViewController.swift */,
+				561D795C1AD59BA10086E568 /* Post */,
+				561D79601AD59CFA0086E568 /* Feed */,
+				561D795D1AD59CE60086E568 /* Search */,
+				561D795F1AD59CF30086E568 /* Activity */,
+				561D795E1AD59CED0086E568 /* Profile */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -357,6 +408,7 @@
 				C4A22FB51AD3728A009393B2 /* ExploreViewController.swift in Sources */,
 				C4A22FB71AD372A0009393B2 /* ActivityViewController.swift in Sources */,
 				C4E52FD71AD43F8A003D9743 /* FeedViewController.swift in Sources */,
+				561D79621AD5B0E70086E568 /* PostTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,6 +540,7 @@
 					"$(PROJECT_DIR)/MMInstagram",
 				);
 				INFOPLIST_FILE = MMInstagram/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -509,6 +562,7 @@
 					"$(PROJECT_DIR)/MMInstagram",
 				);
 				INFOPLIST_FILE = MMInstagram/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
