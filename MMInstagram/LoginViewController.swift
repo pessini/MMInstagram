@@ -7,34 +7,54 @@
 //
 
 import UIKit
+import Parse
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
 
-    @IBOutlet weak var signUpView: UIView!
-    @IBOutlet weak var logInView: UIView!
-
-    
     override func viewDidLoad()
     {
         super.viewDidLoad()
 
-        self.logInView.hidden = false
-        self.signUpView.hidden = true
-
     }
 
-    
-    @IBAction func onLoginButtonTapped(sender: UIButton)
+    @IBAction func onLogInButtonTapped(sender: UIButton)
     {
-        self.logInView.hidden = false
-        self.signUpView.hidden = true
+
+        PFUser.logInWithUsernameInBackground(usernameTextField.text, password: passwordTextField.text) { (returnedUser, returnedError) -> Void in
+
+            if returnedError == nil
+            {
+                self.dismissViewControllerAnimated(true, completion: nil)
+            }
+            else
+            {
+                self.showAlert("There was an error with your login", error: returnedError)
+            }
+        }
     }
 
-    @IBAction func onSignUpButtonTapped(sender: UIButton)
+    // MARK: Helper Method
+
+    func showAlert(message: String, error: NSError)
     {
-        self.logInView.hidden = true
-        self.signUpView.hidden = false
+        let alert = UIAlertController(title: message, message: error.localizedDescription, preferredStyle: .Alert)
+        let okAction = UIAlertAction(title: "Ok", style: .Cancel, handler: nil)
+        alert.addAction(okAction)
+        presentViewController(alert, animated: true, completion: nil)
     }
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        if segue.identifier == "ShowSignUpSegue"
+        {
+            let vc = segue.destinationViewController as SignUpViewController
+            vc.prevUsername = self.usernameTextField.text
+            vc.prevPassword = self.passwordTextField.text
+        }
+    }
+
 
 }

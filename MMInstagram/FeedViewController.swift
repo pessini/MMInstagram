@@ -11,7 +11,8 @@ import Parse
 
 class FeedViewController: UIViewController {
 
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
 
 
@@ -23,7 +24,16 @@ class FeedViewController: UIViewController {
         {
             self.performSegueWithIdentifier("LoginSegue", sender: nil)
         }
-
     }
     
+    @IBAction func logOutButtonTapped(sender: UIBarButtonItem)
+    {
+        PFUser.logOut()
+
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewControllerWithIdentifier("InitialViewController") as UIViewController
+        self.presentViewController(vc, animated: true, completion: nil)
+    }
+
+
 }

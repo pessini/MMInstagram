@@ -12,6 +12,7 @@
 		560A1C151AD329AB00C85F93 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 560A1C141AD329AB00C85F93 /* Images.xcassets */; };
 		560A1C181AD329AB00C85F93 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 560A1C161AD329AB00C85F93 /* LaunchScreen.xib */; };
 		560A1C241AD329AB00C85F93 /* MMInstagramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560A1C231AD329AB00C85F93 /* MMInstagramTests.swift */; };
+		562364BC1AD46E7700BC92CC /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562364BB1AD46E7700BC92CC /* SignUpViewController.swift */; };
 		C4A22FB51AD3728A009393B2 /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A22FB41AD3728A009393B2 /* ExploreViewController.swift */; };
 		C4A22FB71AD372A0009393B2 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A22FB61AD372A0009393B2 /* ActivityViewController.swift */; };
 		C4A22FB91AD372B9009393B2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A22FB81AD372B9009393B2 /* ProfileViewController.swift */; };
@@ -19,8 +20,6 @@
 		C4A22FBF1AD38D50009393B2 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4A22FBE1AD38D50009393B2 /* MobileCoreServices.framework */; };
 		C4E52FD71AD43F8A003D9743 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E52FD61AD43F8A003D9743 /* FeedViewController.swift */; };
 		C4E52FD91AD44053003D9743 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E52FD81AD44053003D9743 /* LoginViewController.swift */; };
-		C4E52FDB1AD445F1003D9743 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E52FDA1AD445F1003D9743 /* SignupViewController.swift */; };
-		C4E52FDD1AD4461E003D9743 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E52FDC1AD4461E003D9743 /* SigninViewController.swift */; };
 		CEE50356E258A1672949B222 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 384FC5123BD8E01E2F96B41F /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +45,7 @@
 		560A1C1D1AD329AB00C85F93 /* MMInstagramTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MMInstagramTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		560A1C221AD329AB00C85F93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		560A1C231AD329AB00C85F93 /* MMInstagramTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMInstagramTests.swift; sourceTree = "<group>"; };
+		562364BB1AD46E7700BC92CC /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		5F9802965DFE68E2940680E3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		C4A22FB41AD3728A009393B2 /* ExploreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		C4A22FB61AD372A0009393B2 /* ActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
@@ -54,8 +54,6 @@
 		C4A22FBE1AD38D50009393B2 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		C4E52FD61AD43F8A003D9743 /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		C4E52FD81AD44053003D9743 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		C4E52FDA1AD445F1003D9743 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
-		C4E52FDC1AD4461E003D9743 /* SigninViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,16 +154,23 @@
 		562364BA1AD455D900BC92CC /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				562364BD1AD46E8100BC92CC /* Login */,
 				C4E52FD61AD43F8A003D9743 /* FeedViewController.swift */,
-				C4E52FD81AD44053003D9743 /* LoginViewController.swift */,
-				C4E52FDC1AD4461E003D9743 /* SigninViewController.swift */,
 				C4A22FBC1AD37F9D009393B2 /* CameraViewController.swift */,
-				C4E52FDA1AD445F1003D9743 /* SignupViewController.swift */,
 				C4A22FB41AD3728A009393B2 /* ExploreViewController.swift */,
 				C4A22FB61AD372A0009393B2 /* ActivityViewController.swift */,
 				C4A22FB81AD372B9009393B2 /* ProfileViewController.swift */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		562364BD1AD46E8100BC92CC /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				C4E52FD81AD44053003D9743 /* LoginViewController.swift */,
+				562364BB1AD46E7700BC92CC /* SignUpViewController.swift */,
+			);
+			name = Login;
 			sourceTree = "<group>";
 		};
 		CF20B32A94FE14841719D7BC /* Pods */ = {
@@ -315,13 +320,12 @@
 			files = (
 				C4E52FD91AD44053003D9743 /* LoginViewController.swift in Sources */,
 				560A1C0E1AD329AB00C85F93 /* AppDelegate.swift in Sources */,
-				C4E52FDB1AD445F1003D9743 /* SignupViewController.swift in Sources */,
+				562364BC1AD46E7700BC92CC /* SignUpViewController.swift in Sources */,
 				C4A22FB91AD372B9009393B2 /* ProfileViewController.swift in Sources */,
 				C4A22FBD1AD37F9D009393B2 /* CameraViewController.swift in Sources */,
 				C4A22FB51AD3728A009393B2 /* ExploreViewController.swift in Sources */,
 				C4A22FB71AD372A0009393B2 /* ActivityViewController.swift in Sources */,
 				C4E52FD71AD43F8A003D9743 /* FeedViewController.swift in Sources */,
-				C4E52FDD1AD4461E003D9743 /* SigninViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
