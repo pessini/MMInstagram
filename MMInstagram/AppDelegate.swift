@@ -8,6 +8,7 @@
 
 import UIKit
 import Parse
+import ParseFacebookUtils
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,6 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     {
         Parse.setApplicationId("sKwqE3bLtwTUCVrZWzJ0s3SzJM3DzEnuw9AyHQ3T",
             clientKey: "1OyC8xvTAGhOM5rvl9tIss81sAGgEgiJCskxFZ2p")
+
+        PFFacebookUtils.initializeFacebook()
+
         return true
     }
 

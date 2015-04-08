@@ -234,7 +234,7 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ## Parse
 
-See https://www.parse.com/about/terms
+See https://parse.com/about/terms
 
 ## ParseFacebookUtils
 
