@@ -58,6 +58,13 @@
                                     <rect key="frame" x="16" y="149" width="175" height="30"/>
                                 </variation>
                             </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mXf-le-JHT" customClass="FBLoginView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="327" width="200" height="50"/>
+                                </variation>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -66,6 +73,7 @@
                                 <exclude reference="Xhg-02-V8k"/>
                                 <exclude reference="FEJ-GI-5mx"/>
                                 <exclude reference="fNa-k5-iYI"/>
+                                <exclude reference="mXf-le-JHT"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -74,10 +82,12 @@
                                 <include reference="Xhg-02-V8k"/>
                                 <include reference="FEJ-GI-5mx"/>
                                 <include reference="fNa-k5-iYI"/>
+                                <include reference="mXf-le-JHT"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="fbLoginView" destination="mXf-le-JHT" id="8ka-cV-9Po"/>
                         <outlet property="passwordTextField" destination="fNa-k5-iYI" id="VeT-zg-kyi"/>
                         <outlet property="usernameTextField" destination="FEJ-GI-5mx" id="MQX-Er-Ucr"/>
                     </connections>

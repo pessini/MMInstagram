@@ -7,16 +7,32 @@
 //
 
 import UIKit
-import Parse
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, FBLoginViewDelegate {
 
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var fbLoginView: FBLoginView!
 
     override func viewDidLoad()
     {
         super.viewDidLoad()
+
+        self.fbLoginView.delegate = self
+        self.fbLoginView.readPermissions = ["public_profile", "email", "user_friends"]
+
+//        if !PFFacebookUtils.isLinkedWithUser(PFUser.currentUser())
+//        {
+//            PFFacebookUtils.linkUser(PFUser.currentUser(), permissions:nil,
+//                {
+//                (succeeded: Bool!, error: NSError!) -> Void in
+//                if succeeded != nil
+//                {
+//                    println("Woohoo, user logged in with Facebook!")
+//                }
+//            })
+//        }
+
 
     }
 
@@ -34,6 +50,54 @@ class LoginViewController: UIViewController {
                 self.showAlert("There was an error with your login", error: returnedError)
             }
         }
+    }
+
+    // MARK: Facebook Delegate Methods
+
+    func loginViewShowingLoggedInUser(loginView : FBLoginView!)
+    {
+        println("User Logged In")
+    }
+
+    func loginViewFetchedUserInfo(loginView : FBLoginView!, user: FBGraphUser)
+    {
+        println("User: \(user)")
+        println("User ID: \(user.objectID)")
+        println("User Name: \(user.name)")
+        var userEmail = user.objectForKey("email") as String
+        println("User Email: \(userEmail)")
+
+        PFFacebookUtils.logInWithPermissions(self.fbLoginView.readPermissions, {
+            (user: PFUser!, error: NSError!) -> Void in
+            if let user = user
+            {
+                if user.isNew
+                {
+                    println("User signed up and logged in through Facebook!")
+
+                }
+                else
+                {
+                    println("User logged in through Facebook!")
+                }
+                self.dismissViewControllerAnimated(true, completion: nil)
+            }
+            else
+            {
+                println("Uh oh. The user cancelled the Facebook login.")
+            }
+        })
+
+    }
+
+    func loginViewShowingLoggedOutUser(loginView : FBLoginView!)
+    {
+        println("User Logged Out")
+    }
+
+    func loginView(loginView : FBLoginView!, handleError:NSError)
+    {
+        println("Error: \(handleError.localizedDescription)")
     }
 
     // MARK: Helper Method
@@ -55,6 +119,7 @@ class LoginViewController: UIViewController {
             vc.prevPassword = self.passwordTextField.text
         }
     }
+
 
 
 }

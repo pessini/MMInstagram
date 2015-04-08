@@ -13,6 +13,10 @@
 		560A1C181AD329AB00C85F93 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 560A1C161AD329AB00C85F93 /* LaunchScreen.xib */; };
 		560A1C241AD329AB00C85F93 /* MMInstagramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560A1C231AD329AB00C85F93 /* MMInstagramTests.swift */; };
 		562364BC1AD46E7700BC92CC /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562364BB1AD46E7700BC92CC /* SignUpViewController.swift */; };
+		56BC66331AD4E16A00CE18F7 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56BC662F1AD4E16A00CE18F7 /* FacebookSDK.framework */; };
+		56BC66341AD4E16A00CE18F7 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56BC66301AD4E16A00CE18F7 /* FBSDKCoreKit.framework */; };
+		56BC66351AD4E16A00CE18F7 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56BC66311AD4E16A00CE18F7 /* FBSDKLoginKit.framework */; };
+		56BC66361AD4E16A00CE18F7 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56BC66321AD4E16A00CE18F7 /* FBSDKShareKit.framework */; };
 		56C3389C1AD4D604005FA28F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56C3389B1AD4D604005FA28F /* AudioToolbox.framework */; };
 		56C3389E1AD4D60D005FA28F /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56C3389D1AD4D60D005FA28F /* CFNetwork.framework */; };
 		56C338A01AD4D614005FA28F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56C3389F1AD4D614005FA28F /* CoreGraphics.framework */; };
@@ -59,6 +63,11 @@
 		560A1C221AD329AB00C85F93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		560A1C231AD329AB00C85F93 /* MMInstagramTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMInstagramTests.swift; sourceTree = "<group>"; };
 		562364BB1AD46E7700BC92CC /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		56BC662B1AD4DF7600CE18F7 /* MMInstagram-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MMInstagram-Bridging-Header.h"; sourceTree = "<group>"; };
+		56BC662F1AD4E16A00CE18F7 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = MMInstagram/FacebookSDK.framework; sourceTree = "<group>"; };
+		56BC66301AD4E16A00CE18F7 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = MMInstagram/FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		56BC66311AD4E16A00CE18F7 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = MMInstagram/FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		56BC66321AD4E16A00CE18F7 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = MMInstagram/FBSDKShareKit.framework; sourceTree = "<group>"; };
 		56C3389B1AD4D604005FA28F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		56C3389D1AD4D60D005FA28F /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		56C3389F1AD4D614005FA28F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -91,11 +100,14 @@
 			files = (
 				56C338AE1AD4D65F005FA28F /* libsqlite3.dylib in Frameworks */,
 				56C338AC1AD4D652005FA28F /* libz.dylib in Frameworks */,
+				56BC66351AD4E16A00CE18F7 /* FBSDKLoginKit.framework in Frameworks */,
 				56C338AA1AD4D644005FA28F /* SystemConfiguration.framework in Frameworks */,
 				56E00EF71AD4DAF900E3825F /* Bolts.framework in Frameworks */,
 				56C338A81AD4D634005FA28F /* StoreKit.framework in Frameworks */,
+				56BC66331AD4E16A00CE18F7 /* FacebookSDK.framework in Frameworks */,
 				56E00EF91AD4DAF900E3825F /* ParseCrashReporting.framework in Frameworks */,
 				56C338A61AD4D62D005FA28F /* Security.framework in Frameworks */,
+				56BC66341AD4E16A00CE18F7 /* FBSDKCoreKit.framework in Frameworks */,
 				56E00EF81AD4DAF900E3825F /* Parse.framework in Frameworks */,
 				56E00EFA1AD4DAF900E3825F /* ParseFacebookUtils.framework in Frameworks */,
 				56E00EFC1AD4DAF900E3825F /* ParseUI.framework in Frameworks */,
@@ -103,6 +115,7 @@
 				56E00EFB1AD4DAF900E3825F /* ParseFacebookUtilsV4.framework in Frameworks */,
 				56C338A21AD4D61C005FA28F /* CoreLocation.framework in Frameworks */,
 				56C338A01AD4D614005FA28F /* CoreGraphics.framework in Frameworks */,
+				56BC66361AD4E16A00CE18F7 /* FBSDKShareKit.framework in Frameworks */,
 				56C3389E1AD4D60D005FA28F /* CFNetwork.framework in Frameworks */,
 				56C3389C1AD4D604005FA28F /* AudioToolbox.framework in Frameworks */,
 				C4A22FBF1AD38D50009393B2 /* MobileCoreServices.framework in Frameworks */,
@@ -122,6 +135,10 @@
 		11EE58401260F09DE22DAAA0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				56BC662F1AD4E16A00CE18F7 /* FacebookSDK.framework */,
+				56BC66301AD4E16A00CE18F7 /* FBSDKCoreKit.framework */,
+				56BC66311AD4E16A00CE18F7 /* FBSDKLoginKit.framework */,
+				56BC66321AD4E16A00CE18F7 /* FBSDKShareKit.framework */,
 				56E00EF11AD4DAF900E3825F /* Bolts.framework */,
 				56E00EF21AD4DAF900E3825F /* Parse.framework */,
 				56E00EF31AD4DAF900E3825F /* ParseCrashReporting.framework */,
@@ -165,6 +182,7 @@
 		560A1C0A1AD329AB00C85F93 /* MMInstagram */ = {
 			isa = PBXGroup;
 			children = (
+				56BC662B1AD4DF7600CE18F7 /* MMInstagram-Bridging-Header.h */,
 				560A1C0D1AD329AB00C85F93 /* AppDelegate.swift */,
 				562364B91AD4556D00BC92CC /* View */,
 				562364BA1AD455D900BC92CC /* Controller */,
@@ -461,6 +479,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -472,6 +491,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "MMInstagram/MMInstagram-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -479,6 +500,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -490,6 +512,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "MMInstagram/MMInstagram-Bridging-Header.h";
 			};
 			name = Release;
 		};
