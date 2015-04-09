@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Parse
 
 class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, UIActionSheetDelegate, UIGestureRecognizerDelegate, UINavigationControllerDelegate {
 
@@ -55,7 +54,7 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
             }
             else
             {
-                self.showAlert("There was an error with your sign up", error: returnedError)
+                self.showAlert("There was an error with your sign up", error: returnedError!)
             }
         }
     }
@@ -66,12 +65,12 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
     {
         let actionSheet = UIActionSheet(title: nil, delegate: self, cancelButtonTitle: nil, destructiveButtonTitle: nil)
 
-        if (UIImagePickerController .isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary))
+        if (UIImagePickerController .isSourceTypeAvailable(.PhotoLibrary))
         {
             actionSheet.addButtonWithTitle("Photo Library")
         }
 
-        if (UIImagePickerController .isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera))
+        if (UIImagePickerController .isSourceTypeAvailable(.Camera))
         {
             actionSheet.addButtonWithTitle("Camera Roll")
         }
@@ -85,7 +84,7 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
 
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject])
     {
-        let image = info[UIImagePickerControllerOriginalImage] as UIImage
+        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
         self.profileImageView.image = image
         self.view.layoutSubviews()
         dismissViewControllerAnimated(true, completion: nil)

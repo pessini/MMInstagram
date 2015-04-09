@@ -41,27 +41,60 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="0.0" y="556" width="400" height="44"/>
                                 </variation>
+<<<<<<< HEAD
                             </toolbar>
+=======
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mXf-le-JHT" customClass="FBLoginView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="327" width="200" height="50"/>
+                                </variation>
+                            </view>
+>>>>>>> leandro
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
+<<<<<<< HEAD
                                 <exclude reference="81B-kt-jJd"/>
                                 <exclude reference="kRv-JY-b12"/>
                                 <exclude reference="fp6-51-jDa"/>
+=======
+                                <exclude reference="loz-ej-3qQ"/>
+                                <exclude reference="Xhg-02-V8k"/>
+                                <exclude reference="FEJ-GI-5mx"/>
+                                <exclude reference="fNa-k5-iYI"/>
+                                <exclude reference="mXf-le-JHT"/>
+>>>>>>> leandro
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
+<<<<<<< HEAD
                                 <include reference="81B-kt-jJd"/>
                                 <include reference="kRv-JY-b12"/>
                                 <include reference="fp6-51-jDa"/>
+=======
+                                <include reference="loz-ej-3qQ"/>
+                                <include reference="Xhg-02-V8k"/>
+                                <include reference="FEJ-GI-5mx"/>
+                                <include reference="fNa-k5-iYI"/>
+                                <include reference="mXf-le-JHT"/>
+>>>>>>> leandro
                             </mask>
                         </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="LmR-FB-g9z"/>
                     <connections>
+<<<<<<< HEAD
                         <outlet property="imageView" destination="81B-kt-jJd" id="fxn-fx-Kcx"/>
+=======
+                        <outlet property="fbLoginView" destination="mXf-le-JHT" id="8ka-cV-9Po"/>
+                        <outlet property="passwordTextField" destination="fNa-k5-iYI" id="VeT-zg-kyi"/>
+                        <outlet property="usernameTextField" destination="FEJ-GI-5mx" id="MQX-Er-Ucr"/>
+>>>>>>> leandro
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="faU-OD-dxF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -130,6 +163,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+<<<<<<< HEAD
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vkx-hL-U9q">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
@@ -151,12 +185,124 @@
                             <mask key="subviews">
                                 <exclude reference="Vkx-hL-U9q"/>
                                 <exclude reference="cuu-kO-VNp"/>
+=======
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="230" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="He4-TM-4bj">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FeedCell" rowHeight="230" id="3PD-3Z-S5y" customClass="PostTableViewCell" customModule="MMInstagram" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3PD-3Z-S5y" id="AFc-wM-c5w">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Cex-wq-yOH">
+                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="184" id="efm-pS-UKP"/>
+                                                    </constraints>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="efm-pS-UKP"/>
+                                                        </mask>
+                                                    </variation>
+                                                    <variation key="widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="0.0" y="1" width="320" height="184"/>
+                                                        <mask key="constraints">
+                                                            <include reference="efm-pS-UKP"/>
+                                                        </mask>
+                                                    </variation>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Post description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pro-VY-vRk">
+                                                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="8" y="193" width="304" height="21"/>
+                                                    </variation>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="pro-VY-vRk" firstAttribute="trailing" secondItem="AFc-wM-c5w" secondAttribute="trailingMargin" id="1Ld-VO-2ee"/>
+                                                <constraint firstItem="pro-VY-vRk" firstAttribute="top" secondItem="Cex-wq-yOH" secondAttribute="bottom" constant="8" id="FEU-wn-kjq"/>
+                                                <constraint firstItem="Cex-wq-yOH" firstAttribute="leading" secondItem="AFc-wM-c5w" secondAttribute="leadingMargin" constant="-8" id="KOk-Cs-vqp"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Cex-wq-yOH" secondAttribute="trailing" constant="-8" id="aAc-3A-upp"/>
+                                                <constraint firstItem="Cex-wq-yOH" firstAttribute="top" secondItem="AFc-wM-c5w" secondAttribute="topMargin" constant="-8" id="dHs-dV-eHa">
+                                                    <variation key="widthClass=compact" constant="-7"/>
+                                                </constraint>
+                                                <constraint firstItem="pro-VY-vRk" firstAttribute="leading" secondItem="AFc-wM-c5w" secondAttribute="leadingMargin" id="ivd-tA-haf"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="subviews">
+                                                    <exclude reference="Cex-wq-yOH"/>
+                                                    <exclude reference="pro-VY-vRk"/>
+                                                </mask>
+                                                <mask key="constraints">
+                                                    <exclude reference="1Ld-VO-2ee"/>
+                                                    <exclude reference="FEU-wn-kjq"/>
+                                                    <exclude reference="ivd-tA-haf"/>
+                                                    <exclude reference="KOk-Cs-vqp"/>
+                                                    <exclude reference="aAc-3A-upp"/>
+                                                    <exclude reference="dHs-dV-eHa"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="widthClass=compact">
+                                                <mask key="subviews">
+                                                    <include reference="Cex-wq-yOH"/>
+                                                    <include reference="pro-VY-vRk"/>
+                                                </mask>
+                                                <mask key="constraints">
+                                                    <include reference="1Ld-VO-2ee"/>
+                                                    <include reference="FEU-wn-kjq"/>
+                                                    <include reference="ivd-tA-haf"/>
+                                                    <include reference="KOk-Cs-vqp"/>
+                                                    <include reference="aAc-3A-upp"/>
+                                                    <include reference="dHs-dV-eHa"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="postImageView" destination="Cex-wq-yOH" id="hCv-89-sxd"/>
+                                            <outlet property="postMessage" destination="pro-VY-vRk" id="5Dm-Ax-aTA"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="He4-TM-4bj" secondAttribute="trailing" constant="-16" id="1AV-QJ-G2G"/>
+                            <constraint firstItem="He4-TM-4bj" firstAttribute="bottom" secondItem="kh9-bI-dsS" secondAttribute="bottomMargin" id="6Il-yS-jbf"/>
+                            <constraint firstItem="He4-TM-4bj" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="SJe-U4-JPt"/>
+                            <constraint firstItem="He4-TM-4bj" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="xgm-HL-ZwH"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="He4-TM-4bj"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="1AV-QJ-G2G"/>
+                                <exclude reference="6Il-yS-jbf"/>
+                                <exclude reference="SJe-U4-JPt"/>
+                                <exclude reference="xgm-HL-ZwH"/>
+>>>>>>> leandro
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
+<<<<<<< HEAD
                                 <include reference="Vkx-hL-U9q"/>
                                 <include reference="cuu-kO-VNp"/>
+=======
+                                <include reference="He4-TM-4bj"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="1AV-QJ-G2G"/>
+                                <include reference="6Il-yS-jbf"/>
+                                <include reference="SJe-U4-JPt"/>
+                                <include reference="xgm-HL-ZwH"/>
+>>>>>>> leandro
                             </mask>
                         </variation>
                     </view>
@@ -165,12 +311,17 @@
                         <barButtonItem key="rightBarButtonItem" title="Inbox" id="6mI-Oa-wUE"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="feedTableView" destination="He4-TM-4bj" id="fXn-hT-Obg"/>
                         <segue destination="2ph-Nz-f7R" kind="presentation" identifier="LoginSegue" id="iJx-wu-jti"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< HEAD
             <point key="canvasLocation" x="2308.5" y="363"/>
+=======
+            <point key="canvasLocation" x="5503.5" y="-1051"/>
+>>>>>>> leandro
         </scene>
         <!--Search-->
         <scene sceneID="Zwz-iH-pRw">

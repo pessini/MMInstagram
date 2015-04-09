@@ -7,53 +7,58 @@
 //
 
 import UIKit
-import MobileCoreServices
 
-class CameraViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
-
-    @IBOutlet var imageView: UIImageView!
-    var images : [UIImage] = []
-    var controller : UIImagePickerController?
+class CameraViewController: UIViewController{
 
 
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        // create fictitious posts
+
+
+//            Class - Post
+//            - User who is posting
+//            - message
+//            - Photo itself
+//            - Location (GeoPoint)
+
+//        var newPost = PFObject(className:"Post")
+//        newPost["user"] = PFUser.query()!.getObjectWithId("4zxX3yFakw")
+//        //4zxX3yFakw - facebook
+//        //yLsKDKrKpE - matt
+//        // FJxitV80U1 - pessini
+//        newPost["message"] = "WOW lol"
+//
+//        let imageData = UIImageJPEGRepresentation(UIImage(named: "image6"), 1.0)
+//        if imageData != nil
+//        {
+//            let imageFile = PFFile(data: imageData)
+//            newPost.setObject(imageFile, forKey: "photo")
+//        }
+//        let point = PFGeoPoint(latitude:40.0, longitude:-30.0)
+//        newPost["photo_location"] = point
+//        
+//        // This will save a newPost
+//
+//        newPost.saveInBackgroundWithBlock { (success: Bool, error) -> Void in
+//            if (success)
+//            {
+//                println("YEAH babe")
+//            }
+//            else
+//            {
+//                println("UGHR ERROR")
+//            }
+//        }
+
+
+
+
+
+
+
     }
-
-    @IBAction func takePhotoAction(sender: AnyObject) {
-        if isCameraAvailable() {
-            let imagePickerController: UIImagePickerController = UIImagePickerController()
-
-            imagePickerController.sourceType = .Camera
-            imagePickerController.mediaTypes = [kUTTypeImage as String]
-            imagePickerController.allowsEditing = true
-            imagePickerController.delegate = self
-
-            presentViewController(imagePickerController, animated: true, completion: nil)
-        } else {
-            println("Camera is not available")
-        }
-    }
-
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]){
-        var currentImage: UIImage!
-        currentImage = info[UIImagePickerControllerEditedImage] as UIImage
-
-        images.append(currentImage)
-        println("Image stored in array")
-        println("Number of stored images: \(images.count)")
-
-        picker.dismissViewControllerAnimated(true, completion: nil)
-    }
-
-    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
-        picker.dismissViewControllerAnimated(true, completion: nil)
-    }
-
-    func isCameraAvailable() -> Bool{
-        return UIImagePickerController.isSourceTypeAvailable(.Camera)
-    }
-
 
 }
