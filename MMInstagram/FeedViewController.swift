@@ -13,7 +13,6 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var feedTableView: UITableView!
 
     var feedArray: [PFObject] = []
-    
 
     override func viewDidLoad()
     {
@@ -22,32 +21,28 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         // Table View Delegate
         self.feedTableView.dataSource = self
         self.feedTableView.delegate = self
-
-
-
-
     }
 
-    // MARK: Query
+    // MARK: queryForUserFeed
 
     func queryForUserFeed()
     {
         let queryUsersToShow = PFQuery(className: "Follow")
-        queryUsersToShow.whereKey("from", equalTo: PFUser.currentUser())
+        queryUsersToShow.whereKey("from", equalTo: PFUser.currentUser()!)
 
         let query =  PFQuery(className: "Post")
         query.whereKey("user", matchesKey: "to", inQuery: queryUsersToShow)
+
         query.orderByDescending("createdAt")
-        
         query.findObjectsInBackgroundWithBlock { (returnedObject, returnedError) -> Void in
             if returnedError == nil
             {
-                self.feedArray = returnedObject as [PFObject]
+                self.feedArray = returnedObject as! [PFObject]
                 self.feedTableView.reloadData()
             }
             else
             {
-                self.showAlert("There was an issue with getting your objects", error: returnedError)
+                self.showAlert("There was an issue with getting your objects", error: returnedError!)
             }
         }
     }
@@ -61,17 +56,17 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCellWithIdentifier("FeedCell") as PostTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("FeedCell") as! PostTableViewCell
         let post = feedArray[indexPath.row] as PFObject
 
-//        let userImageFile = post["imageFile"] as PFFile
-//        userImageFile.getDataInBackgroundWithBlock {
-//            (imageData: NSData!, error: NSError!) -> Void in
-//            if error == nil {
-//                let image = UIImage(data:imageData)
-//            }
-//        }
-//        cell.postImageView.image = post["phot"] as? UIImage
+        let userImageFile = post["photo"] as! PFFile
+
+        userImageFile.getDataInBackgroundWithBlock { (imageData, error) -> Void in
+            if error == nil {
+                let image = UIImage(data:imageData!)
+                cell.postImageView.image = image
+            }
+        }
 
         cell.postMessage.text = post["message"] as? String
         return cell
@@ -94,7 +89,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         PFUser.logOut()
 
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewControllerWithIdentifier("InitialViewController") as UIViewController
+        let vc = storyboard.instantiateViewControllerWithIdentifier("InitialViewController") as! UIViewController
         self.presentViewController(vc, animated: true, completion: nil)
     }
 
