@@ -234,7 +234,8 @@
                                                             <exclude reference="efm-pS-UKP"/>
                                                         </mask>
                                                     </variation>
-                                                    <variation key="widthClass=compact">
+                                                    <variation key="widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="0.0" y="1" width="320" height="184"/>
                                                         <mask key="constraints">
                                                             <include reference="efm-pS-UKP"/>
                                                         </mask>
@@ -245,6 +246,9 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
+                                                    <variation key="widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="8" y="193" width="304" height="21"/>
+                                                    </variation>
                                                 </label>
                                             </subviews>
                                             <constraints>
@@ -263,12 +267,12 @@
                                                     <exclude reference="pro-VY-vRk"/>
                                                 </mask>
                                                 <mask key="constraints">
-                                                    <exclude reference="KOk-Cs-vqp"/>
-                                                    <exclude reference="aAc-3A-upp"/>
-                                                    <exclude reference="dHs-dV-eHa"/>
                                                     <exclude reference="1Ld-VO-2ee"/>
                                                     <exclude reference="FEU-wn-kjq"/>
                                                     <exclude reference="ivd-tA-haf"/>
+                                                    <exclude reference="KOk-Cs-vqp"/>
+                                                    <exclude reference="aAc-3A-upp"/>
+                                                    <exclude reference="dHs-dV-eHa"/>
                                                 </mask>
                                             </variation>
                                             <variation key="widthClass=compact">
@@ -277,12 +281,12 @@
                                                     <include reference="pro-VY-vRk"/>
                                                 </mask>
                                                 <mask key="constraints">
-                                                    <include reference="KOk-Cs-vqp"/>
-                                                    <include reference="aAc-3A-upp"/>
-                                                    <include reference="dHs-dV-eHa"/>
                                                     <include reference="1Ld-VO-2ee"/>
                                                     <include reference="FEU-wn-kjq"/>
                                                     <include reference="ivd-tA-haf"/>
+                                                    <include reference="KOk-Cs-vqp"/>
+                                                    <include reference="aAc-3A-upp"/>
+                                                    <include reference="dHs-dV-eHa"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>

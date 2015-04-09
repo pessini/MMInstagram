@@ -47,7 +47,7 @@ class LoginViewController: UIViewController, FBLoginViewDelegate {
             }
             else
             {
-                self.showAlert("There was an error with your login", error: returnedError)
+                self.showAlert("There was an error with your login", error: returnedError!)
             }
         }
     }
@@ -64,11 +64,10 @@ class LoginViewController: UIViewController, FBLoginViewDelegate {
         println("User: \(user)")
         println("User ID: \(user.objectID)")
         println("User Name: \(user.name)")
-        var userEmail = user.objectForKey("email") as String
+        var userEmail = user.objectForKey("email") as! String
         println("User Email: \(userEmail)")
 
-        PFFacebookUtils.logInWithPermissions(self.fbLoginView.readPermissions, {
-            (user: PFUser!, error: NSError!) -> Void in
+        PFFacebookUtils.logInWithPermissions(fbLoginView.readPermissions, block: { (user, error) -> Void in
             if let user = user
             {
                 if user.isNew
@@ -86,8 +85,8 @@ class LoginViewController: UIViewController, FBLoginViewDelegate {
             {
                 println("Uh oh. The user cancelled the Facebook login.")
             }
-        })
 
+        })
     }
 
     func loginViewShowingLoggedOutUser(loginView : FBLoginView!)
@@ -114,7 +113,7 @@ class LoginViewController: UIViewController, FBLoginViewDelegate {
     {
         if segue.identifier == "ShowSignUpSegue"
         {
-            let vc = segue.destinationViewController as SignUpViewController
+            let vc = segue.destinationViewController as! SignUpViewController
             vc.prevUsername = self.usernameTextField.text
             vc.prevPassword = self.passwordTextField.text
         }
