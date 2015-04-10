@@ -107,7 +107,7 @@
                                     <rect key="frame" x="0.0" y="556" width="400" height="44"/>
                                 </variation>
 
-                            </textField>
+                            </toolbar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mXf-le-JHT" customClass="FBLoginView">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -387,7 +387,7 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                        </subviews>
+                        </mask>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="He4-TM-4bj" secondAttribute="trailing" constant="-16" id="1AV-QJ-G2G"/>
