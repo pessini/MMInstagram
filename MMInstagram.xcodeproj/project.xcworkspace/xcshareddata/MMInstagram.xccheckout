@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>76D8C42E-3D1C-4E6B-9D43-C3F67C21876F</string>
 	<key>IDESourceControlProjectName</key>
-	<string>MMInstagram</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>5E7BF3A8DF906AA9549E90802CB70A775135BADA</key>
 		<string>https://github.com/pessini/MMInstagram.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>MMInstagram.xcodeproj</string>
+	<string>MMInstagram.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>5E7BF3A8DF906AA9549E90802CB70A775135BADA</key>

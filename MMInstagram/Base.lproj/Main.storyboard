@@ -171,15 +171,15 @@
                                 <exclude reference="RCX-vw-Njh"/>
                                 <exclude reference="XQo-pw-IQy"/>
                                 <exclude reference="eWY-6z-bWT"/>
+                                <exclude reference="Qdf-qV-Ojv"/>
+                                <exclude reference="ciR-BI-uCe"/>
+                                <exclude reference="0ae-zz-31z"/>
+                                <exclude reference="kET-cA-h2m"/>
                                 <exclude reference="2Mo-RJ-5cx"/>
                                 <exclude reference="cab-cC-rDL"/>
                                 <exclude reference="fch-0n-OgP"/>
                                 <exclude reference="j0r-yX-UvY"/>
                                 <exclude reference="wqR-oh-gbX"/>
-                                <exclude reference="0ae-zz-31z"/>
-                                <exclude reference="kET-cA-h2m"/>
-                                <exclude reference="Qdf-qV-Ojv"/>
-                                <exclude reference="ciR-BI-uCe"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -196,15 +196,15 @@
                                 <include reference="RCX-vw-Njh"/>
                                 <include reference="XQo-pw-IQy"/>
                                 <include reference="eWY-6z-bWT"/>
+                                <include reference="Qdf-qV-Ojv"/>
+                                <include reference="ciR-BI-uCe"/>
+                                <include reference="0ae-zz-31z"/>
+                                <include reference="kET-cA-h2m"/>
                                 <include reference="2Mo-RJ-5cx"/>
                                 <include reference="cab-cC-rDL"/>
                                 <include reference="fch-0n-OgP"/>
                                 <include reference="j0r-yX-UvY"/>
                                 <include reference="wqR-oh-gbX"/>
-                                <include reference="0ae-zz-31z"/>
-                                <include reference="kET-cA-h2m"/>
-                                <include reference="Qdf-qV-Ojv"/>
-                                <include reference="ciR-BI-uCe"/>
                             </mask>
                         </variation>
                     </view>
