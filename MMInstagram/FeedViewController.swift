@@ -23,6 +23,18 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         self.feedTableView.delegate = self
     }
 
+    override func viewWillAppear(animated: Bool)
+    {
+        if PFUser.currentUser() == nil
+        {
+            self.performSegueWithIdentifier("LoginSegue", sender: nil)
+        }
+        else
+        {
+            queryForUserFeed()
+        }
+    }
+
     // MARK: queryForUserFeed
 
     func queryForUserFeed()
@@ -54,6 +66,11 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return feedArray.count;
     }
 
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat
+    {
+        return 300.0;
+    }
+
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCellWithIdentifier("FeedCell") as! PostTableViewCell
@@ -69,19 +86,71 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
 
         cell.postMessage.text = post["message"] as? String
+
+        // button like pressed
+//        cell.likeButton = LikeButton() as UIButton
+//
+//        cell.likeButton.exclusiveTouch = false
+        cell.likeButton.tag = indexPath.row
+
+        cell.likeButton.addTarget(self, action: "likePost:", forControlEvents: UIControlEvents.TouchUpInside)
+
+
+
+        // button comment pressed
+
+        cell.commentButton.tag = indexPath.row
+        cell.commentButton.addTarget(self, action: "commentsPost:", forControlEvents: UIControlEvents.TouchUpInside)
+
         return cell
     }
 
-    override func viewWillAppear(animated: Bool)
+    func likePost(button: UIButton, likeId: String?)
     {
-        if PFUser.currentUser() == nil
+        button.selected = !button.selected
+
+        if button.selected
         {
-            self.performSegueWithIdentifier("LoginSegue", sender: nil)
+            var like = PFObject(className: "Like")
+            like["user"] = PFUser.currentUser()
+            like["post"] = feedArray[button.tag] as PFObject
+            like.saveInBackgroundWithBlock({ (saved, error) -> Void in
+                if saved
+                {
+                    println("Salvou")
+                }
+                else
+                {
+                    println("Não")
+                }
+            })
         }
         else
         {
-            queryForUserFeed()
+
+//            var unlike = PFObject(withoutDataWithClassName: "Like", objectId: like.objectId)
+//
+//            println(unlike)
+//            var unlike = PFObject(withoutDataWithObjectId: post.objectId)
+//
+//            unlike.deleteInBackgroundWithBlock({ (deleted, error) -> Void in
+//                if deleted
+//                {
+//                    println("DELETOU")
+//                }
+//                else
+//                {
+//                    println("NAO DELETOU")
+//                }
+//            })
+
         }
+    }
+
+    func commentsPost(button: UIButton)
+    {
+
+        self.performSegueWithIdentifier("ShowComments", sender: button)
     }
 
     @IBAction func logOutButtonTapped(sender: UIBarButtonItem)
@@ -91,6 +160,16 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewControllerWithIdentifier("InitialViewController") as! UIViewController
         self.presentViewController(vc, animated: true, completion: nil)
+    }
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        if segue.identifier == "ShowComments"
+        {
+            let vc = segue.destinationViewController as! CommentViewController
+            let post = feedArray[sender!.tag] as PFObject
+            vc.post = post
+        }
     }
 
     // MARK: Helper Method

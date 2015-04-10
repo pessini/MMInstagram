@@ -14,6 +14,10 @@
 		560A1C241AD329AB00C85F93 /* MMInstagramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560A1C231AD329AB00C85F93 /* MMInstagramTests.swift */; };
 		561D79621AD5B0E70086E568 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561D79611AD5B0E70086E568 /* PostTableViewCell.swift */; };
 		562364BC1AD46E7700BC92CC /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562364BB1AD46E7700BC92CC /* SignUpViewController.swift */; };
+		5647009F1AD6BA0A001D793C /* ProfileHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5647009E1AD6BA0A001D793C /* ProfileHeaderCollectionReusableView.swift */; };
+		564700A11AD6D7D3001D793C /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564700A01AD6D7D3001D793C /* PhotoCollectionViewCell.swift */; };
+		56B83BA81AD748EB000092C2 /* LikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B83BA71AD748EB000092C2 /* LikeButton.swift */; };
+		56B83BAA1AD76702000092C2 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B83BA91AD76702000092C2 /* CommentViewController.swift */; };
 		56BC66331AD4E16A00CE18F7 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56BC662F1AD4E16A00CE18F7 /* FacebookSDK.framework */; };
 		56BC66341AD4E16A00CE18F7 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56BC66301AD4E16A00CE18F7 /* FBSDKCoreKit.framework */; };
 		56BC66351AD4E16A00CE18F7 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56BC66311AD4E16A00CE18F7 /* FBSDKLoginKit.framework */; };
@@ -65,6 +69,10 @@
 		560A1C231AD329AB00C85F93 /* MMInstagramTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMInstagramTests.swift; sourceTree = "<group>"; };
 		561D79611AD5B0E70086E568 /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		562364BB1AD46E7700BC92CC /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		5647009E1AD6BA0A001D793C /* ProfileHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		564700A01AD6D7D3001D793C /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		56B83BA71AD748EB000092C2 /* LikeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikeButton.swift; sourceTree = "<group>"; };
+		56B83BA91AD76702000092C2 /* CommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
 		56BC662B1AD4DF7600CE18F7 /* MMInstagram-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MMInstagram-Bridging-Header.h"; sourceTree = "<group>"; };
 		56BC662F1AD4E16A00CE18F7 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = MMInstagram/FacebookSDK.framework; sourceTree = "<group>"; };
 		56BC66301AD4E16A00CE18F7 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = MMInstagram/FBSDKCoreKit.framework; sourceTree = "<group>"; };
@@ -239,6 +247,8 @@
 		561D795E1AD59CED0086E568 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				564700A01AD6D7D3001D793C /* PhotoCollectionViewCell.swift */,
+				5647009E1AD6BA0A001D793C /* ProfileHeaderCollectionReusableView.swift */,
 				C4A22FB81AD372B9009393B2 /* ProfileViewController.swift */,
 			);
 			name = Profile;
@@ -257,6 +267,7 @@
 			children = (
 				561D79631AD5E48F0086E568 /* Custom */,
 				C4E52FD61AD43F8A003D9743 /* FeedViewController.swift */,
+				56B83BA91AD76702000092C2 /* CommentViewController.swift */,
 			);
 			name = Feed;
 			sourceTree = "<group>";
@@ -264,6 +275,7 @@
 		561D79631AD5E48F0086E568 /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				56B83BA71AD748EB000092C2 /* LikeButton.swift */,
 				561D79611AD5B0E70086E568 /* PostTableViewCell.swift */,
 			);
 			name = Custom;
@@ -400,14 +412,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56B83BAA1AD76702000092C2 /* CommentViewController.swift in Sources */,
 				C4E52FD91AD44053003D9743 /* LoginViewController.swift in Sources */,
 				560A1C0E1AD329AB00C85F93 /* AppDelegate.swift in Sources */,
+				5647009F1AD6BA0A001D793C /* ProfileHeaderCollectionReusableView.swift in Sources */,
 				562364BC1AD46E7700BC92CC /* SignUpViewController.swift in Sources */,
+				56B83BA81AD748EB000092C2 /* LikeButton.swift in Sources */,
 				C4A22FB91AD372B9009393B2 /* ProfileViewController.swift in Sources */,
 				C4A22FBD1AD37F9D009393B2 /* CameraViewController.swift in Sources */,
 				C4A22FB51AD3728A009393B2 /* ExploreViewController.swift in Sources */,
 				C4A22FB71AD372A0009393B2 /* ActivityViewController.swift in Sources */,
 				C4E52FD71AD43F8A003D9743 /* FeedViewController.swift in Sources */,
+				564700A11AD6D7D3001D793C /* PhotoCollectionViewCell.swift in Sources */,
 				561D79621AD5B0E70086E568 /* PostTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
