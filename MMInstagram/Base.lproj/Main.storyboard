@@ -15,6 +15,7 @@
                         <viewControllerLayoutGuide type="bottom" id="56N-9y-qQd"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="C0a-VK-PcK">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="eY0-SS-uf6">
@@ -346,7 +347,7 @@
                                                         <segue destination="8aC-D2-pJO" kind="show" identifier="ShowComments" id="Ljq-g6-O4z"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dy4-r0-PY5" customClass="LikeButton" customModule="MMInstagram" customModuleProvider="target">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dy4-r0-PY5">
                                                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="70" id="DK3-bk-tsK"/>
@@ -392,9 +393,6 @@
                                                     <exclude reference="Dy4-r0-PY5"/>
                                                 </mask>
                                                 <mask key="constraints">
-                                                    <exclude reference="KOk-Cs-vqp"/>
-                                                    <exclude reference="aAc-3A-upp"/>
-                                                    <exclude reference="dHs-dV-eHa"/>
                                                     <exclude reference="1Ld-VO-2ee"/>
                                                     <exclude reference="FEU-wn-kjq"/>
                                                     <exclude reference="ivd-tA-haf"/>
@@ -402,6 +400,9 @@
                                                     <exclude reference="xzR-1e-f48"/>
                                                     <exclude reference="7il-52-xkr"/>
                                                     <exclude reference="XIZ-Do-Jjv"/>
+                                                    <exclude reference="KOk-Cs-vqp"/>
+                                                    <exclude reference="aAc-3A-upp"/>
+                                                    <exclude reference="dHs-dV-eHa"/>
                                                 </mask>
                                             </variation>
                                             <variation key="widthClass=compact">
@@ -412,9 +413,6 @@
                                                     <include reference="Dy4-r0-PY5"/>
                                                 </mask>
                                                 <mask key="constraints">
-                                                    <include reference="KOk-Cs-vqp"/>
-                                                    <include reference="aAc-3A-upp"/>
-                                                    <include reference="dHs-dV-eHa"/>
                                                     <include reference="1Ld-VO-2ee"/>
                                                     <include reference="FEU-wn-kjq"/>
                                                     <include reference="ivd-tA-haf"/>
@@ -422,6 +420,9 @@
                                                     <include reference="xzR-1e-f48"/>
                                                     <include reference="7il-52-xkr"/>
                                                     <include reference="XIZ-Do-Jjv"/>
+                                                    <include reference="KOk-Cs-vqp"/>
+                                                    <include reference="aAc-3A-upp"/>
+                                                    <include reference="dHs-dV-eHa"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
@@ -921,7 +922,9 @@
                                         <constraint firstItem="GxZ-Z5-HeR" firstAttribute="leading" secondItem="uvZ-RL-ps2" secondAttribute="trailing" constant="8" id="du2-C6-zQ5"/>
                                         <constraint firstItem="qDt-ub-7KY" firstAttribute="leading" secondItem="HLD-ef-91Q" secondAttribute="trailing" constant="33" id="jjA-1L-jV1"/>
                                         <constraint firstItem="HLD-ef-91Q" firstAttribute="leading" secondItem="uvZ-RL-ps2" secondAttribute="trailing" constant="8" id="kTQ-Zf-AyZ"/>
-                                        <constraint firstItem="GxZ-Z5-HeR" firstAttribute="trailing" secondItem="bQJ-Az-8dv" secondAttribute="trailingMargin" id="u2d-t9-MSe"/>
+                                        <constraint firstItem="GxZ-Z5-HeR" firstAttribute="trailing" secondItem="bQJ-Az-8dv" secondAttribute="trailingMargin" id="u2d-t9-MSe">
+                                            <variation key="widthClass=compact" constant="-80"/>
+                                        </constraint>
                                         <constraint firstItem="2Ru-Zu-JRw" firstAttribute="top" secondItem="tAn-pH-KuO" secondAttribute="bottom" id="u7X-tG-9uj"/>
                                         <constraint firstItem="uvZ-RL-ps2" firstAttribute="leading" secondItem="bQJ-Az-8dv" secondAttribute="leadingMargin" id="u9d-UP-kb0"/>
                                         <constraint firstItem="tAn-pH-KuO" firstAttribute="top" secondItem="bQJ-Az-8dv" secondAttribute="topMargin" id="xJG-mw-0Tp"/>
@@ -1141,9 +1144,72 @@
                     <view key="view" contentMode="scaleToFill" id="I7n-MP-uyb">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GKt-DO-ufD">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem image="cameraroll-default-1" id="uz4-l0-A9a">
+                                        <connections>
+                                            <action selector="photoLibrary:" destination="GSh-Pd-MKT" id="XJs-wR-Xqv"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="To8-Al-SbA"/>
+                                    <barButtonItem systemItem="camera" id="5b6-eI-Iwt">
+                                        <connections>
+                                            <action selector="takePhoto:" destination="GSh-Pd-MKT" id="RzN-fx-zix"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kcr-tT-xTg">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GKt-DO-ufD" firstAttribute="leading" secondItem="I7n-MP-uyb" secondAttribute="leadingMargin" constant="-16" id="Kp3-Z2-srg"/>
+                            <constraint firstItem="kcr-tT-xTg" firstAttribute="top" secondItem="I7n-MP-uyb" secondAttribute="topMargin" id="MsV-T3-ikF"/>
+                            <constraint firstItem="kcr-tT-xTg" firstAttribute="leading" secondItem="I7n-MP-uyb" secondAttribute="leadingMargin" constant="-16" id="Rtf-Ib-DP9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kcr-tT-xTg" secondAttribute="trailing" constant="-16" id="c3K-fO-aZj"/>
+                            <constraint firstItem="grx-mw-DwQ" firstAttribute="top" secondItem="GKt-DO-ufD" secondAttribute="bottom" id="g8X-p1-Yl5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GKt-DO-ufD" secondAttribute="trailing" constant="-16" id="rrU-uq-3BG"/>
+                            <constraint firstItem="GKt-DO-ufD" firstAttribute="top" secondItem="kcr-tT-xTg" secondAttribute="bottom" id="vxj-vN-49c"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="GKt-DO-ufD"/>
+                                <exclude reference="kcr-tT-xTg"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="MsV-T3-ikF"/>
+                                <exclude reference="Rtf-Ib-DP9"/>
+                                <exclude reference="c3K-fO-aZj"/>
+                                <exclude reference="Kp3-Z2-srg"/>
+                                <exclude reference="rrU-uq-3BG"/>
+                                <exclude reference="vxj-vN-49c"/>
+                                <exclude reference="g8X-p1-Yl5"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="GKt-DO-ufD"/>
+                                <include reference="kcr-tT-xTg"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="MsV-T3-ikF"/>
+                                <include reference="Rtf-Ib-DP9"/>
+                                <include reference="c3K-fO-aZj"/>
+                                <include reference="Kp3-Z2-srg"/>
+                                <include reference="rrU-uq-3BG"/>
+                                <include reference="vxj-vN-49c"/>
+                                <include reference="g8X-p1-Yl5"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="" id="maX-Eu-sXH"/>
+                    <connections>
+                        <outlet property="imageView" destination="kcr-tT-xTg" id="qy8-I0-Evu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Jh-dj-Vn8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1189,6 +1255,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="cameraroll-default-1" width="44" height="44"/>
         <image name="tabbar-activity-icon" width="64" height="45"/>
         <image name="tabbar-home-icon" width="64" height="45"/>
         <image name="tabbar-profile-icon" width="64" height="45"/>

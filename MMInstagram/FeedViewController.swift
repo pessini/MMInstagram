@@ -32,6 +32,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         else
         {
             queryForUserFeed()
+            self.feedTableView.reloadData()
         }
     }
 
@@ -41,10 +42,8 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     {
         let queryUsersToShow = PFQuery(className: "Follow")
         queryUsersToShow.whereKey("from", equalTo: PFUser.currentUser()!)
-
         let query =  PFQuery(className: "Post")
         query.whereKey("user", matchesKey: "to", inQuery: queryUsersToShow)
-
         query.orderByDescending("createdAt")
         query.findObjectsInBackgroundWithBlock { (returnedObject, returnedError) -> Void in
             if returnedError == nil
@@ -105,7 +104,8 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return cell
     }
 
-    func likePost(button: UIButton, likeId: String?)
+//    func likePost(button: UIButton, likeId: String?)
+        func likePost(button: UIButton)
     {
         button.selected = !button.selected
 
@@ -117,11 +117,11 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
             like.saveInBackgroundWithBlock({ (saved, error) -> Void in
                 if saved
                 {
-                    println("Salvou")
+                    println("Saved")
                 }
                 else
                 {
-                    println("Não")
+                    println("Nope")
                 }
             })
         }

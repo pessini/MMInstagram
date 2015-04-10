@@ -40,7 +40,9 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         user.email = emailTextField.text
         user.setValue(nameTextField.text, forKey: "name")
 
+
         let imageData = UIImagePNGRepresentation(profileImageView.image)
+        println(imageData)
         if imageData != nil
         {
             let imageFile = PFFile(data: imageData)

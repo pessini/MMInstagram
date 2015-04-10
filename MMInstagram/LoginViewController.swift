@@ -33,7 +33,13 @@ class LoginViewController: UIViewController, FBLoginViewDelegate {
 //            })
 //        }
 
+    }
 
+    override func viewWillAppear(animated: Bool) {
+        if PFUser.currentUser() != nil
+        {
+            self.dismissViewControllerAnimated(true, completion: nil)
+        }
     }
 
     @IBAction func onLogInButtonTapped(sender: UIButton)
